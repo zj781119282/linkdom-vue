@@ -1,0 +1,12 @@
+{
+  "HEADER": {
+    "HOME": "首页",
+    "PRODUCT": "产品",
+    "DOWNLOAD": "下载",
+    "HELP": "帮助",
+    "LOGIN": "登录",
+    "WELCOME": "欢迎，",
+    "USER": "用户中心",
+    "LOGOUT": "退出"
+  }
+}

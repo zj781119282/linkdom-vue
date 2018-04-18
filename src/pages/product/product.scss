@@ -1,0 +1,14 @@
+@import "./../../style-sheets/theme";
+@import "./../../style-sheets/mixin";
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (min-width: 1025px) {
+  .preview {
+    .preview-container {
+      width: 1024px;
+    }
+  }
+}

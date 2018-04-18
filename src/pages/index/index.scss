@@ -1,0 +1,76 @@
+@import "./../../style-sheets/theme";
+@import "./../../style-sheets/mixin";
+
+.index-section {
+  .block-container {
+    position: relative;
+    article {
+      h2 {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.cold-hot {
+  background: url("./assets/index-cold.png") no-repeat;
+  background-size: 100% 100%;
+  @include wh(100%, 50vw);
+}
+
+@media only screen and (max-width: 1024px) {
+  .index-section {
+    .block-container {
+      padding: .4rem .2rem;
+      article {
+        margin: .4rem 0;
+        h2 {
+          margin-bottom: .4rem;
+          letter-spacing: .04rem;
+          font-size: .48rem;
+        }
+        p {
+          margin-top: .2rem;
+          letter-spacing: .02rem;
+          font-size: .32rem;
+        }
+      }
+      .image-container {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .index-section {
+    .block-container {
+      padding: 5% 10%;
+      article {
+        width: 50%;
+        float: left;
+        margin-top: 5%;
+        padding: 5%;
+        h2 {
+          margin-bottom: 40px;
+          font-size: 32px;
+          letter-spacing: 4px;
+        }
+        p {
+          margin-top: 20px;
+          font-size: 20px;
+          letter-spacing: 2px;
+        }
+      }
+      .image-container {
+        width: 50%;
+        float: left;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

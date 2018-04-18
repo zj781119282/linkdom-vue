@@ -1,0 +1,51 @@
+@import "./../../../../style-sheets/theme";
+@import "./../../../../style-sheets/mixin";
+
+.swiper-container {
+  img {
+    width: 100%;
+  }
+
+  a {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include wh(100%, 100%);
+  }
+
+  .pagination {
+    display: flex;
+    position: absolute;
+    bottom: .5rem;
+    justify-content: center;
+    z-index: 999;
+
+    span {
+      border: 2px solid #fff;
+      opacity: 1;
+      background-color: transparent;
+      @include wh(14px, 14px);
+
+      &.swiper-pagination-bullet-active {
+        background-color: $theme-color;
+        border-color: $theme-color;
+      }
+    }
+  }
+}
+
+.no-swiper {
+  position: relative;
+  img {
+    width: 100%;
+  }
+
+  a {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include wh(100%, 100%);
+  }
+}

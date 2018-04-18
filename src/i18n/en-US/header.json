@@ -1,0 +1,12 @@
+{
+  "HEADER": {
+    "HOME": "Home",
+    "PRODUCT": "Product",
+    "DOWNLOAD": "Download",
+    "HELP": "Help",
+    "LOGIN": "Login",
+    "WELCOME": "Welcome, ",
+    "USER": "User Center",
+    "LOGOUT": "Log Out"
+  }
+}

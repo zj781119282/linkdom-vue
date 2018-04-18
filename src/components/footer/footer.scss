@@ -1,0 +1,87 @@
+@import "./../../style-sheets/theme";
+@import "./../../style-sheets/mixin";
+
+footer {
+  background-color: $deep-black-background;
+  * {
+    color: #fff;
+  }
+  .email-color {
+    color: $theme-color;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  footer {
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    .container {
+      display: flex;
+      justify-content: center;
+      .logo {
+        display: block;
+        margin-right: 10%;
+      }
+      .links {
+        a {
+          display: block;
+          font-size: 16px;
+          &:hover, &:active {
+            color: $theme-color;
+          }
+          &:not(:first-child) {
+            padding-top: 20%;
+          }
+        }
+      }
+      .contact {
+        margin-left: 30px;
+        p {
+          display: flex;
+          align-items: flex-start;
+          white-space: nowrap;
+          a, span {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  footer {
+    padding: .6rem 0;
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      .links {
+        display: flex;
+        padding: .2rem .2rem .4rem;
+        border-bottom: 1px solid $grey-border;
+        a {
+          padding: 0 .2rem;
+          font-size: .12rem;
+          &:not(:last-child) {
+            border-right: 1px solid #fff;
+          }
+        }
+      }
+
+      .contact {
+        padding: .2rem 0;
+        p {
+          display: flex;
+          align-items: flex-start;
+          span, a {
+            font-size: .12rem;
+          }
+        }
+      }
+    }
+  }
+}
