@@ -1,0 +1,35 @@
+{
+  "LOGIN": {
+    "SIGNIN": {
+      "TITLE": "Sign In",
+      "FORGET": "Forget Password?",
+      "NO_ACCOUNT": "Not a member yet?",
+      "TO_REGISTER": "Register Now!",
+      "ACCOUNT": "Phone Number/Email",
+      "PASSWORD": "Password",
+      "ERROR": "Please enter your account and password correctly!"
+    },
+    "SIGNUP": {
+      "TITLE": "Sign Up",
+      "HAVE": "Already have an account?",
+      "TO_LOG": "Sign In Now!",
+      "PHONE": "Please enter your phone number",
+      "EMAIL": "Please enter your Email",
+      "CAPTCHA": "Please enter verify code",
+      "EMS": "Please enter the verify code you received",
+      "PWD": "Please enter your password",
+      "RE_PWD": "Please enter your password again",
+      "ERROR_ACCOUNT": "Please enter a correct phone number/email!",
+      "ERROR_CAPTCHA": "Please enter verify code!",
+      "ERROR_EMS": "Please enter verify code you received!",
+      "ERROR_PWD": "Please enter a correct password!",
+      "ERROR_REPWD": "Entered passwords differ!"
+    },
+    "FORGET": {
+      "TITLE": "Reset Password",
+      "CONFIRM": "Confirm",
+      "NEW_PWD": "Please enter a new password",
+      "BACK": "< back"
+    }
+  }
+}

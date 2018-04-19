@@ -18,16 +18,16 @@
         <li class="help" :class="{active: page === 'help'}">
           <a href="#/index">{{$t('HEADER.HELP')}}</a>
         </li>
-        <li class="login" :class="{active: page === 'login'}">
+        <li class="login" :class="{active: page === 'login'}" v-if="!isLogged">
           <a href="#/login">{{$t('HEADER.LOGIN')}}</a>
         </li>
-        <!--<li class="account hidden">-->
-          <!--<a href="javascript:;" class="user-name hide-xs"></a>-->
-          <!--<ul class="hide-lg hide-xs" v-show="showUserList">-->
-            <!--<li class="i18n user-center" data-i18n="header.user"></li>-->
-            <!--<li class="i18n logout" data-i18n="header.logout"></li>-->
-          <!--</ul>-->
-        <!--</li>-->
+        <li class="account" @mouseenter="showUserList = true" @mouseleave="showUserList = false" v-else>
+          <a href="javascript:;" class="user-name hide-xs">{{$t('HEADER.WELCOME')}}{{account}}</a>
+          <ul v-show="showUserList">
+            <li class="user-center">{{$t('HEADER.USER')}}</li>
+            <li class="logout" @click="logout()">{{$t('HEADER.LOGOUT')}}</li>
+          </ul>
+        </li>
         <li class="language" @mouseenter="showLanguageList = true" @mouseleave="showLanguageList = false">
           <a href="javascript:;" class="language-list hide-xs">{{currLang}}</a>
           <ul v-show="showLanguageList">

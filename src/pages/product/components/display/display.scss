@@ -1,15 +1,22 @@
 @import "./../../../../style-sheets/theme";
 @import "./../../../../style-sheets/mixin";
 
-@media only screen and (max-width: 1024px) {
+.display-list {
+  border: 1px solid $light-border;
+}
+img {
+  width: 100%;
+}
 
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
   .container {
+    float: left;
     width: 50%;
-    img {
-      width: 100%;
-    }
   }
 }

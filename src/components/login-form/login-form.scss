@@ -1,0 +1,106 @@
+@import "./../../style-sheets/theme";
+@import "./../../style-sheets/mixin";
+
+.form {
+  text-align: center;
+  form {
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      border: 1px solid $light-border;
+      &:focus {
+        border-color: $theme-color;
+      }
+    }
+    .button {
+      display: inline-block;
+      width: 100%;
+      background-color: $theme-color;
+      text-align: center;
+      color: #fff;
+      &:hover {
+        opacity: .9;
+      }
+      &:active {
+        opacity: .8;
+      }
+    }
+    .error-block {
+      color: red;
+    }
+  }
+  .login-other {
+    span, a {
+      display: inline-block;
+    }
+    a {
+      color: $theme-color;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .form {
+    width: 100%;
+    h1 {
+      font-size: .48rem;
+      margin-bottom: .4rem;
+    }
+    form {
+      input:not(:first-child) {
+        margin-top: .2rem;
+      }
+      input[type="text"], input[type="password"] {
+        padding: .1rem .2rem;
+        font-size: .24rem;
+      }
+      .button {
+        margin: .5rem 0;
+        padding: .2rem 0;
+        border-radius: .1rem;
+        font-size: .4rem;
+      }
+      .error-block {
+        font-size: .18rem;
+      }
+    }
+    .login-other {
+      span, a {
+        font-size: .2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .form {
+    width: 460px;
+    margin: 0 auto;
+    padding: 20px;
+    h1 {
+      margin-bottom: 60px;
+    }
+    form {
+      input:not(:first-child) {
+        margin-top: 20px;
+      }
+      input[type="text"], input[type="password"] {
+        padding: 10px 20px;
+      }
+      .button {
+        margin: 40px 0;
+        padding: 10px 0;
+        border-radius: 8px;
+        font-size: 24px;
+      }
+      .error-block {
+        font-size: 14px;
+      }
+    }
+    .login-other {
+      span, a {
+        margin: 20px 0;
+        font-size: 14px;
+      }
+    }
+  }
+}

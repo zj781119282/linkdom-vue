@@ -1,0 +1,113 @@
+@import "./../../../../style-sheets/theme";
+@import "./../../../../style-sheets/mixin";
+
+.container {
+  .desc {
+    color: $light-grey-color;
+  }
+  .choose-color {
+    span {
+      border: 1px solid $light-border;
+      background-color: $light-grey-background;
+      &.active {
+        border-color: $theme-color;
+        background-color: $theme-color;
+        color: #fff;
+      }
+    }
+  }
+  .purchase-button {
+    display: inline-block;
+    width: 100%;
+    background-color: $theme-color;
+    text-align: center;
+    color: #fff;
+    &:active {
+      opacity: .8;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    padding: .4rem 0;
+    h2 {
+      margin-bottom: .4rem;
+      font-size: .4rem;
+      font-weight: bolder;
+      letter-spacing: .02rem;
+    }
+    .desc {
+      margin-bottom: .2rem;
+      font-size: .2rem;
+    }
+    .choose-color {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: .2rem;
+      span {
+        padding: .06rem .2rem;
+        font-size: .16rem;
+        &:not(:first-child) {
+          margin-left: .2rem;
+        }
+      }
+    }
+    .price {
+      margin-bottom: .32rem;
+      font-size: .32rem;
+    }
+    .purchase-button {
+      padding: .2rem 0;
+      border-radius: .08rem;
+      font-size: .32rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .container {
+    display: flex;
+    float: left;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10% 5%;
+    h2 {
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+    .desc {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    .choose-color {
+      margin-bottom: 20px;
+      span {
+        padding: 4px 16px;
+        border: 1px solid $light-border;
+        background-color: $light-grey-background;
+        cursor: pointer;
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+        &:not(.active):hover {
+          opacity: .9;
+        }
+      }
+    }
+    .price {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .purchase-button {
+      padding: 10px 0;
+      border-radius: 8px;
+      font-size: 24px;
+      &:hover {
+        opacity: .9;
+      }
+    }
+  }
+}

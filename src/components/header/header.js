@@ -1,13 +1,18 @@
+import Cookies from 'js-cookie';
+import { mapState } from 'vuex';
+import { mapMutations } from 'vuex';
+
 import { switchLanguage } from '@/i18n/i18n.config';
+import {
+  LOGIN_STATUS,
+  USER_ACCOUNT,
+} from '@/store/mutations-type';
 
 export default {
   name: 'head-top',
   props: [
     'page'
   ],
-  mounted() {
-    console.log(this.showNavList);
-  },
   data() {
     return {
       windowWidth: window.innerWidth,
@@ -17,7 +22,23 @@ export default {
       currLang: localStorage._lang === 'zh-CN' ? '简体中文' : 'English',
     };
   },
+  computed: {
+    ...mapState([
+      'isLogged',
+      'account',
+    ]),
+  },
   methods: {
+    ...mapMutations({
+      LOGIN_STATUS,
+      USER_ACCOUNT,
+    }),
+    logout() {
+      Cookies.remove('isLogged');
+      Cookies.remove('account');
+      this[LOGIN_STATUS](false);
+      this[USER_ACCOUNT]('');
+    },
     switchLang(id) {
       switchLanguage(id);
     },

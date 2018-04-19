@@ -15,10 +15,6 @@ export default {
           slide: window.innerWidth > 1024 ? slide1 : mobile_slide1,
           id: 0,
         },
-        {
-          slide: window.innerWidth > 1024 ? slide1 : mobile_slide1,
-          id: 1,
-        },
       ],
       swiperOption: {
         loop: true,

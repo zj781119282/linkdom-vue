@@ -1,0 +1,35 @@
+{
+  "LOGIN": {
+    "SIGNIN": {
+      "TITLE": "登录",
+      "FORGET": "忘记密码？",
+      "NO_ACCOUNT": "没有账号？",
+      "TO_REGISTER": "去注册吧！",
+      "ACCOUNT": "手机号/邮箱",
+      "PASSWORD": "密码",
+      "ERROR": "请输入正确的账号和密码！"
+    },
+    "SIGNUP": {
+      "TITLE": "注册",
+      "HAVE": "已有账号？",
+      "TO_LOG": "去登录！",
+      "PHONE": "请输入你的手机号",
+      "EMAIL": "请输入你的邮箱",
+      "CAPTCHA": "请输入验证码",
+      "EMS": "请输入你收到的验证码",
+      "PWD": "请输入你的密码",
+      "RE_PWD": "请再次输入你的密码",
+      "ERROR_ACCOUNT": "请输入正确的手机号或邮箱！",
+      "ERROR_CAPTCHA": "请输入验证码！",
+      "ERROR_EMS": "请输入正确的验证码！",
+      "ERROR_PWD": "密码格式不正确！",
+      "ERROR_REPWD": "两次输入的密码不一致！"
+    },
+    "FORGET": {
+      "TITLE": "重置密码",
+      "CONFIRM": "确认重置",
+      "NEW_PWD": "请输入新的密码",
+      "BACK": "< 返回"
+    }
+  }
+}

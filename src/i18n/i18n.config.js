@@ -4,17 +4,21 @@ import VueI18n from 'vue-i18n';
 // 引入英文文件
 import header_en from './en-US/header.json';
 import index_en from './en-US/index.json';
+import product_en from './en-US/product.json';
+import login_en from './en-US/login.json';
 // 引入中文文件
 import header_cn from './zh-CN/header.json';
 import index_cn from './zh-CN/index.json';
+import product_cn from './zh-CN/product.json';
+import login_cn from './zh-CN/login.json';
 
 Vue.use(VueI18n);
 
 export const i18n = new VueI18n({
-  locale: localStorage._lang === 'zh-CN' ? 'zh-CN' : 'en-US',
+  locale: localStorage._lang || 'en-US',
   messages: {
-    'zh-CN': Object.assign(header_cn, index_cn),
-    'en-US': Object.assign(header_en, index_en),
+    'zh-CN': Object.assign(header_cn, index_cn, product_cn, login_cn),
+    'en-US': Object.assign(header_en, index_en, product_en, login_en),
   }
 });
 
@@ -24,6 +28,6 @@ export const i18n = new VueI18n({
  */
 export const switchLanguage = (id) => {
   i18n.locale = id;
-  localStorage._lang = id;
+  localStorage.setItem('_lang', id);
   location.reload();
 }
