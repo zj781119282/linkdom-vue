@@ -11,4 +11,9 @@ export default {
       return `$${this.price.substr(1) * this.quantity}`
     }
   },
+  methods: {
+    update() {
+      location.reload();
+    }
+  }
 }
