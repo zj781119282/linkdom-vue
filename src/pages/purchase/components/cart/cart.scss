@@ -1,0 +1,200 @@
+@import "./../../../../style-sheets/theme";
+@import "./../../../../style-sheets/mixin";
+
+.container {
+  h1 {
+    text-align: center;
+  }
+  table {
+    width: 100%;
+    td {
+      img {
+        width: 100%;
+      }
+      input {
+        border: 1px solid $light-border;
+      }
+      p {
+        color: $light-grey-color;
+      }
+      a {
+        display: inline-block;
+        border: 1px solid $light-border;
+        &:hover {
+          background-color: $light-grey-background;
+        }
+        &:active {
+          opacity: .9;
+        }
+      }
+    }
+  }
+  .bottom {
+    .subtotal {
+      span.sum {
+        font-weight: bolder;
+      }
+    }
+    .checkout {
+      a {
+        border: 1px solid $light-border;
+        &.purchase {
+          background-color: $theme-color;
+          color: #fff;
+          &:hover {
+            opacity: .9;
+          }
+          &:active {
+            opacity: .8;
+          }
+        }
+        &:not(.purchase):hover {
+          background-color: $light-grey-background;
+        }
+        &:not(.purchase):active {
+          opacity: .8;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    padding: .4rem;
+    h1 {
+      margin: .4rem 0;
+      font-size: .48rem;
+    }
+    table {
+      tbody {
+        display: block;
+        tr {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          td {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: .2rem;
+            &:nth-child(1) {
+              width: 30%;
+            }
+            &:nth-child(2) {
+              width: 40%;
+              a {
+                display: none;
+              }
+            }
+            &:nth-child(3) {
+              width: 20%;
+            }
+            &:nth-child(4) {
+              flex-direction: row;
+              justify-content: space-around;
+              align-items: center;
+              padding: .4rem 0;
+            }
+            &:last-child {
+              display: none;
+            }
+            h3 {
+              font-size: .32rem;
+            }
+            p {
+              margin: .1rem 0;
+              font-size: .24rem;
+            }
+            a {
+              padding: .1rem .5rem;
+            }
+            input {
+              width: 1.6rem;
+              margin: 0 .4rem;
+              padding: .1rem 0;
+            }
+          }
+        }
+      }
+    }
+    .subtotal {
+      text-align: center;
+      span {
+        font-size: .32rem;
+      }
+    }
+    .checkout {
+      text-align: center;
+      .purchase {
+        display: inline-block;
+        width: 100%;
+        padding: .2rem 0;
+        border-radius: .12rem;
+        font-size: .28rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10% 0;
+    h1 {
+      margin-bottom: 60px;
+      font-size: 40px;
+    }
+    table {
+      margin-bottom: 40px;
+      th {
+        padding: 27px 0;
+        font-weight: normal;
+        color: $light-grey-color;
+      }
+      td {
+        padding: 22px 0;
+        border-top: 1px solid $light-border;
+        border-bottom: 1px solid $light-border;
+        &:nth-child(1) {
+          width: 130px;
+        }
+        &:nth-child(4) {
+          a {
+            display: none;
+          }
+        }
+        input {
+          width: 60px;
+          padding: 10px 0;
+        }
+        a {
+          padding: 2px 16px;
+        }
+      }
+    }
+    .subtotal {
+      text-align: right;
+      span {
+        &:first-child {
+          font-size: 20px;
+        }
+        &:last-child {
+          margin-left: 20px;
+          font-size: 16px;
+        }
+      }
+    }
+    .checkout {
+      margin-top: 40px;
+      text-align: right;
+      a {
+        margin-left: 20px;
+        font-size: 18px;
+        padding: 6px 16px;
+      }
+    }
+  }
+}

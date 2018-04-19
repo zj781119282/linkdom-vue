@@ -8,6 +8,8 @@ import login from '@/pages/login/login.vue';
 import signin from '@/pages/login/components/signin/signin.vue';
 import signup from '@/pages/login/components/signup/signup.vue';
 import forget from '@/pages/login/components/forget/forget.vue';
+import purchase from '@/pages/purchase/purchase.vue';
+import cart from '@/pages/purchase/components/cart/cart.vue';
 
 Vue.use(Router);
 
@@ -51,6 +53,22 @@ const router = new Router({
           name: 'forget',
           component: forget,
         },
+      ],
+    },
+    {
+      path: '/purchase',
+      name: 'purchase',
+      component: purchase,
+      children: [
+        {
+          path: '/purchase',
+          redirect: '/purchase/cart',
+        },
+        {
+          path: '/purchase/cart',
+          name: 'cart',
+          component: cart,
+        }
       ],
     },
   ],

@@ -1,0 +1,16 @@
+{
+  "PURCHASE": {
+    "CART": {
+      "TITLE": "Your Cart",
+      "PRODUCT": "Product",
+      "PRICE": "Price",
+      "QUANTITY": "Quantity",
+      "TOTAL": "Total",
+      "REMOVE": "REMOVE",
+      "UPDATE": "UPDATE",
+      "SUBTOTAL": "Subtotal",
+      "CONTINUE": "Continue Shopping",
+      "CHECKOUT": "CHECK OUT"
+    }
+  }
+}

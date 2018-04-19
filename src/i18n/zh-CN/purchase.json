@@ -1,0 +1,16 @@
+{
+  "PURCHASE": {
+    "CART": {
+      "TITLE": "购物车",
+      "PRODUCT": "产品",
+      "PRICE": "单价",
+      "QUANTITY": "数量",
+      "TOTAL": "总价",
+      "REMOVE": "移除",
+      "UPDATE": "更新",
+      "SUBTOTAL": "小计",
+      "CONTINUE": "继续购物",
+      "CHECKOUT": "结算"
+    }
+  }
+}
