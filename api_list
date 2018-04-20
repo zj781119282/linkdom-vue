@@ -1,0 +1,87 @@
+## API接口列表
+
+GET_API:
+  产品接口: {// response
+              id: 0,
+              name: '',
+              image: [],
+              thumbnails: [],
+              description: '',
+              type: [
+                {
+                  id: 0,
+                  name: '',
+                },
+              ],
+              price: 0,
+              details: [...Image],
+            },
+  购物车: [// response
+            {
+              id: 0,
+              name: '',
+              thumbnail: '',
+              type: 0,
+              price: '',
+              quantity: 1,
+            },
+            {},
+          ],
+  图片验证码: {// response
+                image: '',
+                captcha: 123,
+              },
+  国家区号: [// response
+              {
+                id: 0,
+                countryCode: '',
+                name: '',
+                enName: '',
+              },
+            ],
+
+POST_API:
+  登录: {// request
+          [phone: '',
+          countryCode: '',]
+          [email: '',]
+          password: '',
+        },
+        {// response
+          token: '',
+          uid: '',
+        },
+  注册/重置密码: {// request
+          type: 'signup',
+          [phone: '',
+          countryCode: '',]
+          [email: '',]
+          captcha: 123,
+          verify: 123,
+          password: '',
+        },
+  获取短信/邮箱验证码: {// request
+                         [phone: '',
+                         countryCode: '',]
+                         [email: '',]
+                       },
+  更新购物车: [// request
+                {
+                  id: 0,
+                  quantity: 1,
+                  xToken: '',
+                },
+              ],
+              [// response
+                购物车列表
+              ],
+  提交用户信息: {// request
+                  name: '',
+                  address: '',
+                  city: '',
+                  country: '',
+                  postalCode: '',
+                  xToken: '',
+                  [email: '',]
+                  [phone: '',]
+                },

@@ -6,7 +6,8 @@
         <input type="text" id="signup_captcha" v-model="captcha" :placeholder="$t('LOGIN.SIGNUP.CAPTCHA')" @focus="hideErrorBlock()"/>
         <input type="text" id="signup_ems" v-model="ems" :placeholder="$t('LOGIN.SIGNUP.EMS')" @focus="hideErrorBlock()"/>
         <input type="password" id="signup_password" v-model="password" :placeholder="$t('LOGIN.SIGNUP.PWD')" @focus="hideErrorBlock()"/>
-        <input type="password" id="signup_repassword" v-model="re_password" :placeholder="$t('LOGIN.SIGNUP.RE_PWD')" @focus="hideErrorBlock()"/>
+        <input type="password" id="signup_repassword" v-model="re_password" :placeholder="$t('LOGIN.SIGNUP.RE_PWD')"
+               @focus="hideErrorBlock()" @keyup="pressEnter($event)"/>
         <a href="javascript:;" class="button" @click="signup()">{{$t('LOGIN.SIGNUP.TITLE')}}</a>
         <p class="error-block" v-show="!!error">{{error}}</p>
       </form>

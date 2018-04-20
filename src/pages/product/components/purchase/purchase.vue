@@ -7,7 +7,7 @@
       <span :class="{active: choseColor === 1}" @click="choseColor = 1">Golden</span>
     </div>
     <p class="price">$9999.99</p>
-    <a href="#/purchase" class="purchase-button">{{$t('PRODUCT.PURCHASE.BUY')}}</a>
+    <a href="javascript:;" class="purchase-button" @click="purchase()">{{$t('PRODUCT.PURCHASE.BUY')}}</a>
   </div>
 </template>
 

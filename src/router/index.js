@@ -10,6 +10,7 @@ import signup from '@/pages/login/components/signup/signup.vue';
 import forget from '@/pages/login/components/forget/forget.vue';
 import purchase from '@/pages/purchase/purchase.vue';
 import cart from '@/pages/purchase/components/cart/cart.vue';
+import contact from '@/pages/purchase/components/contact/contact.vue';
 
 Vue.use(Router);
 
@@ -68,7 +69,12 @@ const router = new Router({
           path: '/purchase/cart',
           name: 'cart',
           component: cart,
-        }
+        },
+        {
+          path: '/purchase/contact',
+          name: 'contact',
+          component: contact,
+        },
       ],
     },
   ],
@@ -78,6 +84,9 @@ router.beforeEach((to, from, next) => {
   const isLogged = Cookies.get('isLogged');
   if (isLogged && isLogged === 'true') {
     to.path.includes('/login') ? next('index') : next();
+    return;
+  } else {
+    to.path.includes('/purchase') ? next('index') : next();
     return;
   }
   next();

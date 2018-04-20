@@ -25,7 +25,7 @@
           </td>
           <td class="tc">
             <a href="javascript:;">{{$t('PURCHASE.CART.REMOVE')}}</a>
-            <input type="number" v-model="quantity" class="tc"/>
+            <input type="number" min="0" v-model="quantity" class="tc"/>
             <a href="javascript:;" @click="update()">{{$t('PURCHASE.CART.UPDATE')}}</a>
           </td>
           <td class="tr" style="font-weight: bold">
@@ -40,9 +40,9 @@
         <span class="sum">{{total}}</span>
       </div>
       <div class="checkout">
-        <a href="javascript:;" class="hide-xs">{{$t('PURCHASE.CART.CONTINUE')}}</a>
+        <!--<a href="#/product" class="hide-xs">{{$t('PURCHASE.CART.CONTINUE')}}</a>-->
         <a href="javascript:;" class="hide-xs" @click="update()">{{$t('PURCHASE.CART.UPDATE')}}</a>
-        <a href="javascript:;" class="purchase">{{$t('PURCHASE.CART.CHECKOUT')}}</a>
+        <a href="#/purchase/contact" class="purchase">{{$t('PURCHASE.CART.CHECKOUT')}}</a>
       </div>
     </div>
   </div>

@@ -11,6 +11,7 @@
                id="signin_password"
                v-model="password"
                @focus="hideErrorBlock()"
+               @keyup="pressEnter($event)"
                :placeholder="$t('LOGIN.SIGNIN.PASSWORD')"/>
         <a href="javascript:;" class="button" @click="signin()">{{$t('LOGIN.SIGNIN.TITLE')}}</a>
         <p class="error-block" v-show="!!error">{{error}}</p>

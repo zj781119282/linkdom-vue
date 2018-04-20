@@ -11,6 +11,21 @@
       "SUBTOTAL": "小计",
       "CONTINUE": "继续购物",
       "CHECKOUT": "结算"
+    },
+    "CONTACT": {
+      "SHIPPING": "运费",
+      "SHOW": "订单摘要",
+      "CONTACT": "联系方式",
+      "EMAIL_PHONE": "邮箱/手机",
+      "ADDRESS_INFO": "邮寄地址",
+      "NAME": "您的名字",
+      "ADDRESS": "详细地址",
+      "CITY": "城市",
+      "Country": "国家",
+      "POSTAL": "邮政编码",
+      "PHONE": "手机号",
+      "CONTINUE": "前往支付",
+      "BACK": "< 返回购物车"
     }
   }
 }

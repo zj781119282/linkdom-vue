@@ -27,6 +27,12 @@ export default {
     hideErrorBlock() {
       this.error = '';
     },
+    pressEnter(ev) {
+      if (ev.keyCode === 13) {
+        this.signin();
+      }
+      return;
+    },
     signin() {
       if (!this.account || !this.password) {
         this.error = this.$t('LOGIN.SIGNIN.ERROR');

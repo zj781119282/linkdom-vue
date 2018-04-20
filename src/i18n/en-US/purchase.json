@@ -11,6 +11,21 @@
       "SUBTOTAL": "Subtotal",
       "CONTINUE": "Continue Shopping",
       "CHECKOUT": "CHECK OUT"
+    },
+    "CONTACT": {
+      "SHIPPING": "Shipping",
+      "SHOW": "Show Order Summary",
+      "CONTACT": "Contact Information",
+      "EMAIL_PHONE": "Email/Phone",
+      "ADDRESS_INFO": "Shipping Address",
+      "NAME": "Your Name",
+      "ADDRESS": "Address",
+      "CITY": "City",
+      "Country": "Country",
+      "POSTAL": "Postal Code",
+      "PHONE": "Phone(Optional)",
+      "CONTINUE": "Continue to Payment",
+      "BACK": "< Return to cart"
     }
   }
 }

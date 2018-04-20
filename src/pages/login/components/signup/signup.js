@@ -19,6 +19,12 @@ export default {
     hideErrorBlock() {
       this.error = '';
     },
+    pressEnter(ev) {
+      if (ev.keyCode === 13) {
+        this.signup();
+      }
+      return;
+    },
     signup() {
       if (!this.account) {
         this.error = this.$t('LOGIN.SIGNUP.ERROR_ACCOUNT');

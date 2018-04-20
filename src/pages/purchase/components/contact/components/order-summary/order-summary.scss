@@ -1,0 +1,137 @@
+@import "./../../../../../../style-sheets/theme";
+@import "./../../../../../../style-sheets/mixin";
+
+.order-summary {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  background-color: $light-grey-background;
+  .container {
+    .product-list {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $light-border;
+      .name {
+        p {
+          color: $light-grey-color;
+        }
+      }
+      .sum {
+        font-weight: bolder;
+      }
+    }
+    .subtotal {
+      border-bottom: 1px solid $light-border;
+      p {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .order-summary {
+    width: 100%;
+    padding: .4rem 0;
+    .show-product {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .3rem;
+      @include border(1px, solid, $light-border, .05rem);
+      span {
+        font-size: .2rem;
+        &:first-child {
+          color: $theme-color;
+        }
+      }
+      &:active {
+        opacity: .8;
+      }
+    }
+    .container {
+      padding: .4rem .2rem;
+      .product-list {
+        width: 100%;
+        padding: .4rem 0;
+        img {
+          width: 1.6rem;
+        }
+        .name {
+          margin-left: .2rem;
+          h3 {
+            font-size: .32rem;
+          }
+          p {
+            font-size: .2rem;
+          }
+        }
+        .sum {
+          margin-left: .2rem;
+          font-size: .3rem;
+        }
+      }
+      .subtotal {
+        padding: .2rem 0;
+        p {
+          margin: .2rem 0;
+          font-size: .2rem;
+        }
+      }
+      .total {
+        padding: .4rem 0;
+        font-size: .24rem;
+        h3 {
+          font-size: .32rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .order-summary {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    top: 60px;
+    bottom: 0;
+    padding: 40px 0 0 60px;
+    .container {
+      width: 420px;
+      .product-list {
+        padding: 30px 0;
+        img {
+          width: 70px;
+        }
+        .name {
+          margin-left: 10px;
+          h3 {
+            font-size: 18px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+      .subtotal {
+        padding: 20px 0;
+        p {
+          margin: 10px 0;
+        }
+      }
+      .total {
+        padding: 30px 0;
+        h3 {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@import "./../../../../../../style-sheets/theme";
+@import "./../../../../../../style-sheets/mixin";
+
+.contact-container {
+  .container {
+    .button {
+      display: inline-block;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      background-color: $theme-color;
+      color: #fff;
+      &:active {
+        opacity: .8;
+      }
+    }
+    .return {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      color: $theme-color;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .contact-container {
+    width: 100%;
+    padding: .4rem .2rem;
+    .container {
+      padding-bottom: 1rem;
+      h3 {
+        margin: .4rem 0;
+        font-size: .32rem;
+      }
+      > div:not(:first-child) {
+        margin-top: .32rem;
+      }
+      .postal {
+        > div:not(:first-child) {
+          margin-top: .32rem;
+        }
+      }
+      .button {
+        margin-top: 1rem;
+        padding: .3rem 0;
+        font-size: .3rem;
+      }
+      .return {
+        margin-top: .6rem;
+        font-size: .2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .contact-container {
+    width: 50%;
+    padding: 60px 40px 200px 0;
+    .container {
+      float: right;
+      width: 580px;
+      h3 {
+        font-size: 24px;
+        margin: 40px 0;
+      }
+      > div:not(:first-child) {
+        margin-top: 16px;
+      }
+      .postal {
+        display: flex;
+        justify-content: space-between;
+        > div:not(:first-child) {
+          margin-left: 16px;
+        }
+      }
+      .button {
+        margin-top: 40px;
+        padding: 20px 0;
+        font-size: 20px;
+        &:hover {
+          opacity: .9;
+        }
+      }
+      .return {
+        margin-top: 40px;
+        font-size: 14px;
+      }
+    }
+  }
+}

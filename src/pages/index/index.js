@@ -4,9 +4,6 @@ import banner from './components/banner/banner.vue';
 
 export default {
   name: 'index',
-  mounted() {
-    console.log('index mounted...')
-  },
   components: {
     headTop,
     foot,

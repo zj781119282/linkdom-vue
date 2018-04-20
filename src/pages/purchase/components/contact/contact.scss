@@ -1,0 +1,18 @@
+@import "./../../../../style-sheets/theme";
+@import "./../../../../style-sheets/mixin";
+
+.container {
+  position: relative;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .container {
+    padding-top: 60px;
+  }
+}

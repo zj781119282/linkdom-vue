@@ -1,0 +1,45 @@
+@import "./../../style-sheets/theme";
+@import "./../../style-sheets/mixin";
+
+.field-container {
+  position: relative;
+  p {
+    position: absolute;
+    color: $light-grey-color;
+  }
+  input {
+    width: 100%;
+    @include border(1px, solid, $grey-border, 4px);
+    &:focus {
+      border-color: $theme-color;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .field-container {
+    display: flex;
+    flex-direction: column;
+    p {
+      top: .1rem;
+      left: .2rem;
+      font-size: .2rem;
+    }
+    input {
+      padding: .4rem .2rem .1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .field-container {
+    p {
+      top: 4px;
+      left: 10px;
+      font-size: 12px;
+    }
+    input {
+      padding: 24px 10px 5px;
+    }
+  }
+}
