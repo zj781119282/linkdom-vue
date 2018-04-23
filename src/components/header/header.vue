@@ -13,7 +13,7 @@
           <a href="#/product">{{$t('HEADER.PRODUCT')}}</a>
         </li>
         <li class="download" :class="{active: page === 'download'}">
-          <a href="#/index">{{$t('HEADER.DOWNLOAD')}}</a>
+          <a href="#/download">{{$t('HEADER.DOWNLOAD')}}</a>
         </li>
         <li class="help" :class="{active: page === 'help'}">
           <a href="#/index">{{$t('HEADER.HELP')}}</a>

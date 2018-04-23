@@ -11,45 +11,6 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1025px) {
-  footer {
-    padding-top: 60px;
-    padding-bottom: 40px;
-
-    .container {
-      display: flex;
-      justify-content: center;
-      .logo {
-        display: block;
-        margin-right: 10%;
-      }
-      .links {
-        a {
-          display: block;
-          font-size: 16px;
-          &:hover, &:active {
-            color: $theme-color;
-          }
-          &:not(:first-child) {
-            padding-top: 20%;
-          }
-        }
-      }
-      .contact {
-        margin-left: 30px;
-        p {
-          display: flex;
-          align-items: flex-start;
-          white-space: nowrap;
-          a, span {
-            font-size: 16px;
-          }
-        }
-      }
-    }
-  }
-}
-
 @media only screen and (max-width: 1024px) {
   footer {
     padding: .6rem 0;
@@ -79,6 +40,50 @@ footer {
           align-items: flex-start;
           span, a {
             font-size: .12rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  footer {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .container {
+      width: 1024px;
+      margin: 0 auto;
+      .logo {
+        display: block;
+        margin-bottom: 20px;
+      }
+      .links {
+        padding: 20px 0;
+        border-bottom: 1px solid $grey-border;
+        a {
+          display: inline-block;
+          width: 200px;
+          border-right: 1px solid $grey-border;
+          font-size: 16px;
+          &:hover, &:active {
+            color: $theme-color;
+          }
+          &:not(:first-child) {
+            padding-left: 20px;
+          }
+        }
+      }
+      .contact {
+        margin: 40px 0;
+        p {
+          display: flex;
+          align-items: flex-start;
+          white-space: nowrap;
+          a, span {
+            font-size: 16px;
           }
         }
       }

@@ -11,6 +11,7 @@ import forget from '@/pages/login/components/forget/forget.vue';
 import purchase from '@/pages/purchase/purchase.vue';
 import cart from '@/pages/purchase/components/cart/cart.vue';
 import contact from '@/pages/purchase/components/contact/contact.vue';
+import download from '@/pages/download/download.vue';
 
 Vue.use(Router);
 
@@ -76,6 +77,11 @@ const router = new Router({
           component: contact,
         },
       ],
+    },
+    {
+      path: '/download',
+      name: 'download',
+      component: download,
     },
   ],
 });
