@@ -1,0 +1,66 @@
+@import "./../../style-sheets/theme";
+@import "./../../style-sheets/mixin";
+
+.container {
+  display: flex;
+  align-items: center;
+
+  input {
+    width: 60%;
+    border: 1px solid $light-border;
+    &:focus {
+      border-color: $theme-color;
+    }
+  }
+
+  a{
+    width: 40%;
+    border: 1px solid $light-border;
+    border-left: none;
+    background-color: $light-grey-background;
+    &:active {
+      background-color: #fff;
+    }
+    &:hover {
+      opacity: .9;
+    }
+    &[disabled] {
+      background-color: $grey-background;
+      color: #fff;
+      cursor: not-allowed;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    margin-top: .4rem;
+
+    input {
+      padding: .1rem .2rem;
+      font-size: .24rem;
+    }
+
+    a {
+      padding: .14rem 0;
+      font-size: .24rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .container {
+    margin-top: 20px;
+
+    input {
+      padding: 10px 20px;
+    }
+
+    a {
+      padding: 8px 0;
+    }
+  }
+}

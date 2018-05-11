@@ -8,7 +8,7 @@ Vue.use(Vuex);
 
 const state = {
   isLogged: Cookies.get('isLogged'),
-  account: Cookies.get('account'),
+  account: Cookies.get('phone'),
 };
 
 export default new Vuex.Store({

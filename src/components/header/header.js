@@ -35,9 +35,10 @@ export default {
     }),
     logout() {
       Cookies.remove('isLogged');
-      Cookies.remove('account');
+      Cookies.remove('phone');
       this[LOGIN_STATUS](false);
       this[USER_ACCOUNT]('');
+      location.reload();
     },
     switchLang(id) {
       switchLanguage(id);

@@ -1,0 +1,52 @@
+@import "./../../style-sheets/theme";
+@import "./../../style-sheets/mixin";
+
+.container {
+  input {
+    border: 1px solid $light-border;
+    &:focus {
+      border-color: $theme-color;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    .country-codes {
+      display: flex;
+      align-items: center;
+      width: 24%;
+      margin-bottom: .2rem;
+      a {
+        font-size: .2rem;
+        color: $theme-color;
+      }
+      i {
+        margin-left: .1rem;
+        @include wh(.18rem, .12rem);
+        @include icon-normal('./../../assets/theme-arrow.png');
+      }
+    }
+
+    input {
+      width: 100%;
+      padding: .1rem .2rem;
+      font-size: .24rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .container {
+    height: 39px;
+
+    .dropdown {
+      @include wh(120px, 100%);
+    }
+
+    input {
+      padding: 10px 20px;
+      @include wh(300px, 100%);
+    }
+  }
+}

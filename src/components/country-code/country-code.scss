@@ -1,0 +1,27 @@
+@import "./../../style-sheets/theme";
+@import "./../../style-sheets/mixin";
+
+.container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  z-index: 9999;
+  @include wh(100vw, 100vh);
+
+  ul {
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100vw;
+      padding: .2rem .3rem;
+      border-bottom: .01rem solid $light-border;
+
+      span {
+        font-size: .24rem;
+        color: $light-grey-color;
+      }
+    }
+  }
+}

@@ -54,9 +54,17 @@
         }
       }
     }
-    .price {
+    p {
       margin-bottom: .32rem;
-      font-size: .32rem;
+      .price {
+        font-size: .32rem;
+        &.line {
+          text-decoration: line-through;
+        }
+      }
+      .discount {
+        font-size: .28rem;
+      }
     }
     .purchase-button {
       padding: .2rem 0;
@@ -97,9 +105,17 @@
         }
       }
     }
-    .price {
+    p {
       margin-bottom: 20px;
-      font-size: 24px;
+      .price {
+        font-size: 24px;
+        &.line {
+          text-decoration: line-through;
+        }
+      }
+      .discount {
+        font-size: 20px;
+      }
     }
     .purchase-button {
       padding: 10px 0;

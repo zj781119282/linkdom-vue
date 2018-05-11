@@ -1,15 +1,20 @@
 import loginForm from '@/components/login-form/login-form.vue';
+import phoneInput from '@/components/phone-input/phone-input.vue'
+import phoneCaptcha from '@/components/phone-captcha/phone-captcha.vue'
+import postData from 'service/postData'
 
 export default {
   name: 'signup',
   components: {
     loginForm,
+    phoneInput,
+    phoneCaptcha,
   },
   data() {
     return {
-      account: '',
+      countryCode: '+86',
+      phone: '',
       captcha: '',
-      ems: '',
       password: '',
       re_password: '',
       error: '',
@@ -25,17 +30,24 @@ export default {
       }
       return;
     },
+    getCountryCode(item) {
+      this.countryCode = item.id;
+      this.hideErrorBlock();
+    },
+    getPhone(phone) {
+      this.phone = phone;
+      this.hideErrorBlock();
+    },
+    getCaptcha(captcha) {
+      this.captcha = captcha;
+    },
     signup() {
-      if (!this.account) {
+      if (!this.phone) {
         this.error = this.$t('LOGIN.SIGNUP.ERROR_ACCOUNT');
         return;
       }
       if (!this.captcha) {
         this.error = this.$t('LOGIN.SIGNUP.ERROR_CAPTCHA');
-        return;
-      }
-      if (!this.ems) {
-        this.error = this.$t('LOGIN.SIGNUP.ERROR_EMS');
         return;
       }
       if (!this.password) {
@@ -46,8 +58,24 @@ export default {
         this.error = this.$t('LOGIN.SIGNUP.ERROR_REPWD');
         return;
       }
-      this.hideErrorBlock();
-      this.$router.push('/login/signin');
+      const params = {
+        countryCode: this.countryCode,
+        phone: this.phone,
+        code: this.captcha,
+      };
+      postData().verifyRegisterCode(params).then(res => {
+        if (res.result) {
+          const data = Object.assign({
+            password: this.password,
+          }, params);
+          postData().register(data).then(res => {
+            if (res.result) {
+              this.hideErrorBlock();
+              this.$router.push('/login/signin');
+            }
+          });
+        }
+      });
     },
   },
 }

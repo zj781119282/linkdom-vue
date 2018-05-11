@@ -2,6 +2,9 @@ import { mapState } from 'vuex';
 
 export default {
   name: 'purchase',
+  props: [
+    'product',
+  ],
   data() {
     return {
       choseColor: 0,

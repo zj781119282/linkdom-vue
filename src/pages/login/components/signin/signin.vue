@@ -2,11 +2,7 @@
   <div class="container">
     <login-form :title="$t('LOGIN.SIGNIN.TITLE')">
       <form class="signin-form">
-        <input type="text"
-               id="signin_account"
-               v-model="account"
-               @focus="hideErrorBlock()"
-               :placeholder="$t('LOGIN.SIGNIN.ACCOUNT')"/>
+        <phone-input @phone="getPhone" @selected="getCountryCode"></phone-input>
         <input type="password"
                id="signin_password"
                v-model="password"

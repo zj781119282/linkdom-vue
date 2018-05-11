@@ -2,11 +2,10 @@
   <div class="container">
     <login-form :title="$t('LOGIN.FORGET.TITLE')">
       <form class="signin-form">
-        <input type="text" id="signup_account" v-model="account" :placeholder="$t('LOGIN.SIGNIN.ACCOUNT')" @focus="hideErrorBlock()"/>
+        <phone-input @phone="getPhone" @selected="getCountryCode"></phone-input>
         <input type="password" id="signup_password" v-model="password" :placeholder="$t('LOGIN.FORGET.NEW_PWD')" @focus="hideErrorBlock()"/>
         <input type="password" id="signup_repassword" v-model="re_password" :placeholder="$t('LOGIN.SIGNUP.RE_PWD')" @focus="hideErrorBlock()"/>
-        <input type="text" id="signup_captcha" v-model="captcha" :placeholder="$t('LOGIN.SIGNUP.CAPTCHA')" @focus="hideErrorBlock()"/>
-        <input type="text" id="signup_ems" v-model="ems" :placeholder="$t('LOGIN.SIGNUP.EMS')" @focus="hideErrorBlock()"/>
+        <phone-captcha :phone="phone"></phone-captcha>
         <a href="javascript:;" class="button" @click="confirm()">{{$t('LOGIN.FORGET.CONFIRM')}}</a>
         <p class="error-block" v-show="!!error">{{error}}</p>
       </form>

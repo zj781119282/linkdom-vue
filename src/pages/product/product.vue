@@ -5,7 +5,7 @@
       <section class="preview">
         <div class="preview-container clearfix">
           <display/>
-          <purchase/>
+          <purchase :product="product"/>
         </div>
       </section>
 

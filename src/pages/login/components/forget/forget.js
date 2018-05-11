@@ -1,15 +1,18 @@
 import loginForm from '@/components/login-form/login-form.vue';
+import phoneInput from '@/components/phone-input/phone-input.vue'
+import phoneCaptcha from '@/components/phone-captcha/phone-captcha.vue'
 
 export default {
   name: 'forget',
   components: {
     loginForm,
+    phoneInput,
+    phoneCaptcha,
   },
   data() {
     return {
-      account: '',
+      phone: '',
       captcha: '',
-      ems: '',
       password: '',
       re_password: '',
       error: '',
@@ -19,8 +22,16 @@ export default {
     hideErrorBlock() {
       this.error = '';
     },
+    getCountryCode(item) {
+      this.countryCode = item.id;
+      this.hideErrorBlock();
+    },
+    getPhone(phone) {
+      this.phone = phone;
+      this.hideErrorBlock();
+    },
     confirm() {
-      if (!this.account) {
+      if (!this.phone) {
         this.error = this.$t('LOGIN.SIGNUP.ERROR_ACCOUNT');
         return;
       }
@@ -34,10 +45,6 @@ export default {
       }
       if (!this.captcha) {
         this.error = this.$t('LOGIN.SIGNUP.ERROR_CAPTCHA');
-        return;
-      }
-      if (!this.ems) {
-        this.error = this.$t('LOGIN.SIGNUP.ERROR_EMS');
         return;
       }
       this.hideErrorBlock();
