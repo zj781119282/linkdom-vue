@@ -35,5 +35,11 @@ export default function () {
     getCountryCodes() {
       return getFunction(urls.countryCodes);
     },
+    getCart() {
+      return getFunction(urls.getCart, {}, true);
+    },
+    getAddress() {
+      return getFunction(urls.getAddress, {}, true);
+    },
   }
 }

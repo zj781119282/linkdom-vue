@@ -42,5 +42,14 @@ export default function () {
     register(params) {
       return postFunction(urls.register, params);
     },
+    addToCart(params) {
+      return postFunction(urls.addToCart, params, true);
+    },
+    addAddress(params) {
+      return postFunction(urls.addAddress, params, true);
+    },
+    deleteAddress(params) {
+      return postFunction(urls.deleteAddress, params, true);
+    },
   };
 };

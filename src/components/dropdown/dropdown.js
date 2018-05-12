@@ -19,4 +19,9 @@ export default {
   mounted() {
     this.headData = this.head;
   },
+  watch: {
+    head(nv) {
+      this.headData = this.head;
+    }
+  },
 }

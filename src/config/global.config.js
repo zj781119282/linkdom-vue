@@ -10,5 +10,10 @@ export default {
     verify: '/user/verify', // 校验验证码
     defaultCountryCode: '/commons/verify_code/get_default_country_code', // 获取默认国家区号
     countryCodes: '/commons/verify_code/get_country_codes', // 获取国家区号
+    addToCart: '/cart/add_to_cart', // 添加到购物车
+    getCart: '/cart/get_user_cart', // 获取用户购物车
+    addAddress: '/user/add_address', // 添加地址
+    getAddress: '/user/get_addresses', // 获取地址
+    deleteAddress: '/user/delete_address', // 删除地址
   },
 }

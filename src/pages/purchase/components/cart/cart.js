@@ -1,3 +1,5 @@
+import getData from 'service/getData'
+
 export default {
   name: 'cart',
   data() {
@@ -14,6 +16,14 @@ export default {
   methods: {
     update() {
       location.reload();
-    }
-  }
+    },
+    getCart() {
+      getData().getCart().then(res => {
+        console.log(res)
+      });
+    },
+  },
+  mounted() {
+    this.getCart();
+  },
 }

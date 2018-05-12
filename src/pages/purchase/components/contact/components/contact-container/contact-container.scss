@@ -2,54 +2,102 @@
 @import "./../../../../../../style-sheets/mixin";
 
 .contact-container {
-  .container {
-    .button {
-      display: inline-block;
-      width: 100%;
-      border-radius: 10px;
-      text-align: center;
-      background-color: $theme-color;
-      color: #fff;
-      &:active {
-        opacity: .8;
-      }
+  .address {
+    position: relative;
+    @include border(1px, solid, $light-border, 6px);
+    &.active {
+      box-shadow: 0 0px 5px 1px rgba(52, 154, 255, .8);
     }
-    .return {
-      display: inline-block;
-      width: 100%;
-      text-align: center;
+    p:not(:last-of-type) {
+      border-bottom: 1px solid $light-border;
+    }
+    span {
+      color: $light-grey-color;
+    }
+    em {
+      font-style: normal;
+    }
+    a {
+      position: absolute;
       color: $theme-color;
     }
+  }
+  .others {
+    text-align: right;
+    .switch {
+      color: $theme-color;
+      &.hide {
+        color: $red-color;
+      }
+    }
+  }
+  .button {
+    display: inline-block;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    background-color: $theme-color;
+    color: #fff;
+    &:active {
+      opacity: .8;
+    }
+    &[disabled] {
+      cursor: not-allowed;
+      background-color: $grey-background;
+      &:hover, &:active {
+        opacity: 1;
+      }
+    }
+  }
+  .return {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: $theme-color;
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .contact-container {
-    width: 100%;
-    padding: .4rem .2rem;
-    .container {
-      padding-bottom: 1rem;
-      h3 {
-        margin: .4rem 0;
-        font-size: .32rem;
-      }
-      > div:not(:first-child) {
-        margin-top: .32rem;
-      }
-      .postal {
-        > div:not(:first-child) {
+    padding: .4rem .2rem 1rem;
+
+    .addresses {
+      .address {
+        &:not(:first-child) {
           margin-top: .32rem;
         }
+        p {
+          line-height: .3rem;
+          margin: 0 .4rem;
+          padding: .2rem 1rem .2rem 0;
+        }
+        span {
+          margin-right: .6rem;
+          font-size: .28rem;
+        }
+        em {
+          font-size: .24rem;
+        }
+        a {
+          right: .2rem;
+          top: .2rem;
+          font-size: .24rem;
+        }
       }
-      .button {
-        margin-top: 1rem;
-        padding: .3rem 0;
-        font-size: .3rem;
+    }
+    .others {
+      .switch {
+        font-size: .28rem;
       }
-      .return {
-        margin-top: .6rem;
-        font-size: .2rem;
-      }
+    }
+    .button {
+      margin-top: 1rem;
+      padding: .3rem 0;
+      font-size: .3rem;
+    }
+    .return {
+      margin-top: .6rem;
+      font-size: .2rem;
     }
   }
 }
@@ -57,36 +105,53 @@
 @media only screen and (min-width: 1025px) {
   .contact-container {
     width: 50%;
+    min-height: calc(100vh - 355px);
     padding: 60px 40px 200px 0;
-    .container {
+
+    .addresses {
+      .address {
+        width: 580px;
+        float: right;
+        cursor: pointer;
+        &:not(:first-child) {
+          margin-top: 20px;
+        }
+        p {
+          margin: 0 20px;
+          padding: 10px 50px 10px 0;
+        }
+        span {
+          margin-right: 40px;
+          font-size: 16px;
+        }
+        em {
+          font-size: 14px;
+        }
+        a {
+          right: 10px;
+          top: 10px;
+          font-size: 14px;
+        }
+      }
+    }
+    .others {
+      margin-top: 40px;
+    }
+    .button {
       float: right;
       width: 580px;
-      h3 {
-        font-size: 24px;
-        margin: 40px 0;
+      margin-top: 40px;
+      padding: 20px 0;
+      font-size: 20px;
+      &:hover {
+        opacity: .9;
       }
-      > div:not(:first-child) {
-        margin-top: 16px;
-      }
-      .postal {
-        display: flex;
-        justify-content: space-between;
-        > div:not(:first-child) {
-          margin-left: 16px;
-        }
-      }
-      .button {
-        margin-top: 40px;
-        padding: 20px 0;
-        font-size: 20px;
-        &:hover {
-          opacity: .9;
-        }
-      }
-      .return {
-        margin-top: 40px;
-        font-size: 14px;
-      }
+    }
+    .return {
+      float: right;
+      width: 580px;
+      margin-top: 40px;
+      font-size: 14px;
     }
   }
 }

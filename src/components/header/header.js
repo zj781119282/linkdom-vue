@@ -36,6 +36,8 @@ export default {
     logout() {
       Cookies.remove('isLogged');
       Cookies.remove('phone');
+      Cookies.remove('userId');
+      Cookies.remove('xtoken');
       this[LOGIN_STATUS](false);
       this[USER_ACCOUNT]('');
       location.reload();

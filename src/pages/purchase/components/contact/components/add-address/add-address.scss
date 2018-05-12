@@ -1,0 +1,72 @@
+@import "./../../../../../../style-sheets/theme";
+@import "./../../../../../../style-sheets/mixin";
+
+.address-container {
+  .container {
+    .return {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      color: $theme-color;
+      &.add {
+        display: inline-block;
+        width: auto;
+        float: right;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .address-container {
+    .container {
+      h3 {
+        margin: .4rem 0;
+        font-size: .32rem;
+      }
+      .add-address {
+        > div:not(:first-child) {
+          margin-top: .32rem;
+        }
+      }
+      .postal {
+        > div:not(:first-child) {
+          margin-top: .32rem;
+        }
+      }
+      .return {
+        margin-top: .6rem;
+        font-size: .2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .address-container {
+    .container {
+      float: right;
+      width: 580px;
+      h3 {
+        font-size: 24px;
+        margin: 40px 0;
+      }
+      .add-address {
+        > div:not(:first-child) {
+          margin-top: 16px;
+        }
+      }
+      .postal {
+        display: flex;
+        justify-content: space-between;
+        > div:not(:first-child) {
+          margin-left: 16px;
+        }
+      }
+      .return {
+        margin-top: 40px;
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
   <div class="dropdown-container" @mouseenter="show = true" @mouseleave="show = false">
     <div class="dropdown-head">
       <span class="ellipsis">{{headData.name}}</span>
-      <span>{{headData.id}}</span>
+      <span >{{headData.id}}</span>
       <i></i>
     </div>
     <ul class="dropdown-body" v-show="show">

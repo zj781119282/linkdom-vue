@@ -62,6 +62,7 @@ export default {
           this.hideErrorBlock();
           Cookies.set('isLogged', true, { expires: 1 });
           Cookies.set('phone', this.phone, { expires: 1 });
+          Cookies.set('userId', data.userId, { expires: 1 });
           this[LOGIN_STATUS](true);
           this[USER_ACCOUNT](this.phone);
           this.$router.push('/index');
