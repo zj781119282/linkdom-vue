@@ -45,6 +45,7 @@
         <a href="#/purchase/contact" class="purchase">{{$t('PURCHASE.CART.CHECKOUT')}}</a>
       </div>
     </div>
+    <loading v-show="!loaded"></loading>
   </div>
 </template>
 

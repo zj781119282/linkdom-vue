@@ -1,10 +1,11 @@
-import Cookies from 'js-cookie';
-import { mapMutations } from 'vuex';
+import Cookies from 'js-cookie'
+import { mapMutations } from 'vuex'
 
 import postData from 'service/postData'
-import loginForm from '@/components/login-form/login-form.vue';
+import loading from '@/components/loading/loading.vue'
+import loginForm from '@/components/login-form/login-form.vue'
 import phoneInput from '@/components/phone-input/phone-input.vue'
-import { encode, decode } from 'service/encryption';
+import { encode, decode } from 'service/encryption'
 import {
   LOGIN_STATUS,
   USER_ACCOUNT,
@@ -15,6 +16,7 @@ export default {
   components: {
     loginForm,
     phoneInput,
+    loading,
   },
   data() {
     return {
@@ -22,6 +24,7 @@ export default {
       phone: '',
       password: '',
       error: '',
+      loaded: true,
     }
   },
   methods: {
@@ -51,6 +54,8 @@ export default {
         this.error = this.$t('LOGIN.SIGNIN.ERROR');
         return;
       }
+      if (!this.loaded) return;
+      this.loaded = false;
       const params = {
         countryCode: this.countryCode,
         phone: this.phone,
@@ -65,6 +70,7 @@ export default {
           Cookies.set('userId', data.userId, { expires: 1 });
           this[LOGIN_STATUS](true);
           this[USER_ACCOUNT](this.phone);
+          this.loaded = true;
           this.$router.push('/index');
           const loginInfo = {
             timestamp: new Date().valueOf(),

@@ -13,7 +13,8 @@
           <span>{{$t('PURCHASE.CONTACT.TO')}}</span>
           <em>{{item.address}},{{item.street}},{{item.city}},{{item.province}},{{item.country}}</em>
         </p>
-        <a href="javascript:;" @click="deleteAddress(item.id)">{{$t('PURCHASE.CONTACT.DELETE')}}</a>
+        <a href="javascript:;" @click="deleteAddress(item)">{{$t('PURCHASE.CONTACT.DELETE')}}</a>
+        <loading :part="true" v-show="item.deleting"></loading>
       </div>
     </div>
     <div class="others" v-show="showButton">
@@ -23,6 +24,7 @@
     <add-address v-show="show" @added="getAddress"></add-address>
     <a href="javascript:;" class="button" @click="payment" :disabled="!showButton">{{$t('PURCHASE.CONTACT.CONTINUE')}}</a>
     <a href="#/purchase/cart" class="return">{{$t('PURCHASE.CONTACT.BACK')}}</a>
+    <loading :part="true" v-show="!loaded"></loading>
   </div>
 </template>
 

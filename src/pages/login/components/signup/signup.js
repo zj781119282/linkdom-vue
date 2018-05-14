@@ -1,3 +1,4 @@
+import loading from '@/components/loading/loading.vue'
 import loginForm from '@/components/login-form/login-form.vue';
 import phoneInput from '@/components/phone-input/phone-input.vue'
 import phoneCaptcha from '@/components/phone-captcha/phone-captcha.vue'
@@ -9,6 +10,7 @@ export default {
     loginForm,
     phoneInput,
     phoneCaptcha,
+    loading,
   },
   data() {
     return {
@@ -18,6 +20,7 @@ export default {
       password: '',
       re_password: '',
       error: '',
+      loaded: true,
     }
   },
   methods: {
@@ -58,6 +61,8 @@ export default {
         this.error = this.$t('LOGIN.SIGNUP.ERROR_REPWD');
         return;
       }
+      if (!this.loaded) return;
+      this.loaded = false;
       const params = {
         countryCode: this.countryCode,
         phone: this.phone,
@@ -71,6 +76,7 @@ export default {
           postData().register(data).then(res => {
             if (res.result) {
               this.hideErrorBlock();
+              this.loaded = true;
               this.$router.push('/login/signin');
             }
           });

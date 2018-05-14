@@ -2,8 +2,10 @@
 @import "./../../../../../../style-sheets/mixin";
 
 .contact-container {
+  position: relative;
   .address {
     position: relative;
+    transition: box-shadow .5s ease;
     @include border(1px, solid, $light-border, 6px);
     &.active {
       box-shadow: 0 0px 5px 1px rgba(52, 154, 255, .8);

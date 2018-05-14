@@ -5,7 +5,6 @@
       <div class="login-container">
         <router-view></router-view>
       </div>
-
       <foot/>
     </div>
   </div>

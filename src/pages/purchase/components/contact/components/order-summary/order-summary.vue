@@ -30,6 +30,7 @@
         <h3>$9999.99</h3>
       </div>
     </div>
+    <loading :part="true" v-show="!loaded"></loading>
   </div>
 </template>
 

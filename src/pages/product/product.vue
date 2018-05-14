@@ -20,6 +20,7 @@
 
       <foot/>
     </div>
+    <loading v-show="!loaded"></loading>
   </div>
 </template>
 

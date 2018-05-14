@@ -13,7 +13,10 @@
       <span class="price" :class="{line: product.discount != 1}">{{product.price}}</span>
       <span class="discount" v-if="product.discount != 1">{{product.price * product.discount}}</span>
     </p>
-    <a href="javascript:;" class="purchase-button" @click="purchase()">{{$t('PRODUCT.PURCHASE.BUY')}}</a>
+    <a href="javascript:;" class="purchase-button" @click="purchase()">
+      {{$t('PRODUCT.PURCHASE.BUY')}}
+      <loading :part="true" v-if="!loaded"></loading>
+    </a>
   </div>
 </template>
 

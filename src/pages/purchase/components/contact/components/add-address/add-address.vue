@@ -22,6 +22,7 @@
         <input-field :title="$t('PURCHASE.CONTACT.POSTAL')" v-model="postal"/>
       </div>
       <a href="javascript:;" class="return add" @click="addAddress">+ {{$t('PURCHASE.CONTACT.ADD')}}</a>
+      <loading :part="true" v-show="!loaded"></loading>
     </div>
   </div>
 </template>

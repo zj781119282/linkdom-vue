@@ -9,7 +9,10 @@
                @focus="hideErrorBlock()"
                @keyup="pressEnter($event)"
                :placeholder="$t('LOGIN.SIGNIN.PASSWORD')"/>
-        <a href="javascript:;" class="button" @click="signin()">{{$t('LOGIN.SIGNIN.TITLE')}}</a>
+        <a href="javascript:;" class="button" @click="signin()">
+          {{$t('LOGIN.SIGNIN.TITLE')}}
+          <loading :part="true" v-if="!loaded"></loading>
+        </a>
         <p class="error-block" v-show="!!error">{{error}}</p>
       </form>
       <div class="login-other" slot="other">

@@ -7,7 +7,10 @@
         <input type="password" id="signup_password" v-model="password" :placeholder="$t('LOGIN.SIGNUP.PWD')" @focus="hideErrorBlock()"/>
         <input type="password" id="signup_repassword" v-model="re_password" :placeholder="$t('LOGIN.SIGNUP.RE_PWD')"
                @focus="hideErrorBlock()" @keyup="pressEnter($event)"/>
-        <a href="javascript:;" class="button" @click="signup()">{{$t('LOGIN.SIGNUP.TITLE')}}</a>
+        <a href="javascript:;" class="button" @click="signup()">
+          {{$t('LOGIN.SIGNUP.TITLE')}}
+          <loading :part="true" v-if="!loaded"></loading>
+        </a>
         <p class="error-block" v-show="!!error">{{error}}</p>
       </form>
       <div class="login-other" slot="other">

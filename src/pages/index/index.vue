@@ -3,7 +3,6 @@
     <head-top page="index"/>
     <div class="content">
       <banner/>
-
       <section class="index-section index-cryption">
         <div class="block-container clearfix">
           <article class="text-right-lg text-center-xs">
@@ -15,11 +14,10 @@
           </div>
         </div>
       </section>
-
       <section class="index-section cold-hot"></section>
-
       <foot/>
     </div>
+    <loading v-show="!loaded"></loading>
   </div>
 </template>
 

@@ -2,18 +2,20 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Cookies from 'js-cookie';
 
-import index from '@/pages/index/index.vue';
-import product from '@/pages/product/product.vue';
-import login from '@/pages/login/login.vue';
-import signin from '@/pages/login/components/signin/signin.vue';
-import signup from '@/pages/login/components/signup/signup.vue';
-import forget from '@/pages/login/components/forget/forget.vue';
-import purchase from '@/pages/purchase/purchase.vue';
-import cart from '@/pages/purchase/components/cart/cart.vue';
-import contact from '@/pages/purchase/components/contact/contact.vue';
-import download from '@/pages/download/download.vue';
+import loading from '@/components/loading/loading.vue'
 
 Vue.use(Router);
+
+const index = () => import('@/pages/index/index.vue');
+const product = () => import('@/pages/product/product.vue');
+const login = () => import('@/pages/login/login.vue');
+const signin = () => import('@/pages/login/components/signin/signin.vue');
+const purchase = () => import('@/pages/purchase/purchase.vue');
+const signup = () => import('@/pages/login/components/signup/signup.vue');
+const forget = () => import('@/pages/login/components/forget/forget.vue');
+const cart = () => import('@/pages/purchase/components/cart/cart.vue');
+const contact = () => import('@/pages/purchase/components/contact/contact.vue');
+const download = () => import('@/pages/download/download.vue');
 
 const router = new Router({
   routes: [

@@ -1,12 +1,14 @@
 import Cookies from 'js-cookie'
 import getData from 'service/getData'
 import postData from 'service/postData'
-import inputField from '@/components/input-field/input-field.vue';
+import loading from '@/components/loading/loading.vue'
+import inputField from '@/components/input-field/input-field.vue'
 
 export default {
   name: 'add-address',
   components: {
     inputField,
+    loading,
   },
   data() {
     return {
@@ -19,10 +21,12 @@ export default {
       province: '',
       country: '',
       postal: '',
+      loaded: true,
     }
   },
   methods: {
     addAddress() {
+      this.loaded = false;
       const params = {
         phone: this.phone,
         userName: this.userName,
@@ -36,6 +40,7 @@ export default {
       };
       postData().addAddress(params).then(res => {
         this.userAddress = res.data;
+        this.loaded = true;
         this.$emit('added');
       })
     },
