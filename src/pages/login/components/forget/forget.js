@@ -11,6 +11,7 @@ export default {
   },
   data() {
     return {
+      countryCode: '',
       phone: '',
       captcha: '',
       password: '',
@@ -25,6 +26,9 @@ export default {
     getCountryCode(item) {
       this.countryCode = item.id;
       this.hideErrorBlock();
+    },
+    getCaptcha(captcha) {
+      this.captcha = captcha;
     },
     getPhone(phone) {
       this.phone = phone;
@@ -49,6 +53,9 @@ export default {
       }
       this.hideErrorBlock();
       this.$router.push('/login/signin');
-    }
+    },
+    getCaptchaError(message) {
+      this.error = message;
+    },
   },
 }

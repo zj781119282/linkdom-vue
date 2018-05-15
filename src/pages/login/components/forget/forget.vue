@@ -5,7 +5,10 @@
         <phone-input @phone="getPhone" @selected="getCountryCode"></phone-input>
         <input type="password" id="signup_password" v-model="password" :placeholder="$t('LOGIN.FORGET.NEW_PWD')" @focus="hideErrorBlock()"/>
         <input type="password" id="signup_repassword" v-model="re_password" :placeholder="$t('LOGIN.SIGNUP.RE_PWD')" @focus="hideErrorBlock()"/>
-        <phone-captcha :phone="phone"></phone-captcha>
+        <phone-captcha :phone="phone"
+                       :country-code="countryCode"
+                       @captcha="getCaptcha"
+                       @get-captcha-error="getCaptchaError"></phone-captcha>
         <a href="javascript:;" class="button" @click="confirm()">{{$t('LOGIN.FORGET.CONFIRM')}}</a>
         <p class="error-block" v-show="!!error">{{error}}</p>
       </form>

@@ -21,8 +21,12 @@ export default {
         phone: this.phone,
       };
       postData().getRegisterVerifyCode(params).then(res => {
-        this.send = true;
-        this.calcTime();
+        if (res.result) {
+          this.send = true;
+          this.calcTime();
+        } else {
+          this.$emit('get-captcha-error', res.message);
+        }
       });
     },
     calcTime() {

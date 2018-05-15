@@ -80,6 +80,7 @@ export default {
           Cookies.set('xtoken', encode(JSON.stringify(loginInfo)));
         } else {
           this.error = res.message;
+          this.loaded = true;
         }
       });
     },

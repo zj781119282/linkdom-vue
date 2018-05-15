@@ -12,7 +12,10 @@ export default {
     return {
       phone: '',
       show: false,
-      defaultCountry: {},
+      defaultCountry: {
+        name: '--',
+        id: '--',
+      },
       list: [],
     }
   },
@@ -26,7 +29,7 @@ export default {
         };
       });
     },
-    getCountryCodes() { // @TODO
+    getCountryCodes() {
       getData().getCountryCodes().then(res => {
         const data = res.data;
         data.forEach(item => {

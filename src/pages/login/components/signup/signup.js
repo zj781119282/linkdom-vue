@@ -73,15 +73,24 @@ export default {
           const data = Object.assign({
             password: this.password,
           }, params);
-          postData().register(data).then(res => {
-            if (res.result) {
+          postData().register(data).then(response => {
+            if (response.result) {
               this.hideErrorBlock();
               this.loaded = true;
               this.$router.push('/login/signin');
+            } else {
+              this.error = response.message;
+              this.loaded = true;
             }
           });
+        } else {
+          this.error = res.message;
+          this.loaded = true;
         }
       });
+    },
+    getCaptchaError(message) {
+      this.error = message;
     },
   },
 }

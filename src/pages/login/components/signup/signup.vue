@@ -3,7 +3,11 @@
     <login-form :title="$t('LOGIN.SIGNUP.TITLE')">
       <form class="signin-form">
         <phone-input @phone="getPhone" @selected="getCountryCode"></phone-input>
-        <phone-captcha :phone="phone" :country-code="countryCode" @captcha="getCaptcha"></phone-captcha>
+        <phone-captcha :phone="phone"
+                       :country-code="countryCode"
+                       @captcha="getCaptcha"
+                       @get-captcha-error="getCaptchaError">
+        </phone-captcha>
         <input type="password" id="signup_password" v-model="password" :placeholder="$t('LOGIN.SIGNUP.PWD')" @focus="hideErrorBlock()"/>
         <input type="password" id="signup_repassword" v-model="re_password" :placeholder="$t('LOGIN.SIGNUP.RE_PWD')"
                @focus="hideErrorBlock()" @keyup="pressEnter($event)"/>
