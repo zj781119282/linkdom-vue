@@ -26,6 +26,13 @@
     &:active {
       opacity: .8;
     }
+    &[disabled] {
+      background-color: $grey-background;
+      cursor: not-allowed;
+      &:hover, &:active {
+        opacity: 1;
+      }
+    }
   }
 }
 

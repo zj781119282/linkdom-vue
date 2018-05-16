@@ -3,17 +3,17 @@
     <h2>{{product.title}}</h2>
     <p class="desc">{{product.englishTitle}}</p>
     <div class="choose-color clearfix">
-      <span :class="{active: choseColor === index}"
-            @click="choseColor = index"
-            v-for="(color, index) in Array(product.color)">
-        {{color}}
+      <span :class="{active: color === item}"
+            @click="color = item"
+            v-for="item in product.color">
+        {{item}}
       </span>
     </div>
     <p>
       <span class="price" :class="{line: product.discount != 1}">{{product.price}}</span>
       <span class="discount" v-if="product.discount != 1">{{product.price * product.discount}}</span>
     </p>
-    <a href="javascript:;" class="purchase-button" @click="purchase()">
+    <a href="javascript:;" class="purchase-button" @click="purchase()" :disabled="!color">
       {{$t('PRODUCT.PURCHASE.BUY')}}
       <loading :part="true" v-if="!loaded"></loading>
     </a>

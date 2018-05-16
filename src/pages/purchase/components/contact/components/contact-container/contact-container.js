@@ -1,5 +1,6 @@
-import loading from '@/components/loading/loading.vue';
-import addAddress from './../add-address/add-address.vue';
+import Cookies from 'js-cookie'
+import loading from '@/components/loading/loading.vue'
+import addAddress from './../add-address/add-address.vue'
 import getData from 'service/getData'
 import postData from 'service/postData'
 
@@ -16,6 +17,7 @@ export default {
       show: false,
       showButton: true,
       loaded: false,
+      payLoaded: true,
     }
   },
   methods: {
@@ -28,7 +30,8 @@ export default {
             item.deleting = false;
             this.address.push(item);
           });
-          this.id = res.data[0].id;
+          const length = res.data.length;
+          this.id = res.data[length - 1].id;
           this.showButton = true;
           this.show = false;
         } else {
@@ -54,7 +57,20 @@ export default {
     },
     payment() {
       if (!this.showButton) return;
-      console.log('@TODO...');
+      this.payLoaded = false;
+      const params = {
+        addressId: this.id,
+        userId: Cookies.get('userId'),
+        productId: 1,
+        count: 1,
+        color: '黑色',
+      };
+      postData().create(params).then(res => {
+        console.log(res)
+        if (res.result) {
+          this.payLoaded = true;
+        }
+      });
     },
   },
   mounted() {

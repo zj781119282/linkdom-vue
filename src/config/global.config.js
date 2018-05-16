@@ -15,5 +15,9 @@ export default {
     addAddress: '/user/add_address', // 添加地址
     getAddress: '/user/get_addresses', // 获取地址
     deleteAddress: '/user/delete_address', // 删除地址
+    getOrders: '/order/get_user_orders', // 获取用户订单
+    createOrder: '/order/create', // 创建订单
+    cancelOrder: '/order/cancel_order', // 取消订单
+    deleteOrder: '/order/delete_order', // 删除订单
   },
 }

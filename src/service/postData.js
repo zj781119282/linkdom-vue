@@ -51,5 +51,8 @@ export default function () {
     deleteAddress(params) {
       return postFunction(urls.deleteAddress, params, true);
     },
+    create(params) {
+      return postFunction(urls.createOrder, params, true);
+    },
   };
 };

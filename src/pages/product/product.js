@@ -24,6 +24,12 @@ export default {
     getProductInfo() {
       getData().getProductInfo().then(res => {
         this.product = res.data;
+        let color = this.product.color;
+        color = color.substring(1, color.length - 1).split(',');
+        color.forEach((item, index) => {
+          color[index] = item.substring(1, item.length - 1);
+        });
+        this.product.color = color;
         this.loaded = true;
       })
     },
