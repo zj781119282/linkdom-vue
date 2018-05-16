@@ -22,7 +22,7 @@
       <a href="javascript:;" class="switch hide" @click="show = false" v-show="show">-{{$t('PURCHASE.CONTACT.CANCEL')}}</a>
     </div>
     <add-address v-show="show" @added="getAddress"></add-address>
-    <a href="javascript:;" class="button" @click="payment" :disabled="!showButton">
+    <a href="javascript:;" class="common-button" @click="payment" :disabled="!showButton">
       {{$t('PURCHASE.CONTACT.CONTINUE')}}
       <loading :part="true" v-show="!payLoaded"></loading>
     </a>

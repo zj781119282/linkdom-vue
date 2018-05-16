@@ -9,7 +9,7 @@
                        :country-code="countryCode"
                        @captcha="getCaptcha"
                        @get-captcha-error="getCaptchaError"></phone-captcha>
-        <a href="javascript:;" class="button" @click="confirm()">{{$t('LOGIN.FORGET.CONFIRM')}}</a>
+        <a href="javascript:;" class="common-button" @click="confirm()">{{$t('LOGIN.FORGET.CONFIRM')}}</a>
         <p class="error-block" v-show="!!error">{{error}}</p>
       </form>
       <div class="login-other" slot="other">

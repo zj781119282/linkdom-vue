@@ -2,14 +2,19 @@
   <div class="container">
     <login-form :title="$t('LOGIN.SIGNIN.TITLE')">
       <form class="signin-form">
-        <phone-input @phone="getPhone" @selected="getCountryCode"></phone-input>
+        <phone-input @phone="getPhone"
+                     @selected="getCountryCode"></phone-input>
+        <p class="error-block" v-show="errors.has('phone')">{{errors.first('phone')}}</p>
         <input type="password"
                id="signin_password"
+               v-validate="'required'"
+               name="password"
                v-model="password"
                @focus="hideErrorBlock()"
                @keyup="pressEnter($event)"
                :placeholder="$t('LOGIN.SIGNIN.PASSWORD')"/>
-        <a href="javascript:;" class="button" @click="signin()">
+        <p class="error-block" v-show="errors.has('password')">{{errors.first('password')}}</p>
+        <a href="javascript:;" class="common-button" @click="signin()">
           {{$t('LOGIN.SIGNIN.TITLE')}}
           <loading :part="true" v-if="!loaded"></loading>
         </a>

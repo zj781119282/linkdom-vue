@@ -33,25 +33,6 @@
       }
     }
   }
-  .button {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    border-radius: 10px;
-    text-align: center;
-    background-color: $theme-color;
-    color: #fff;
-    &:active {
-      opacity: .8;
-    }
-    &[disabled] {
-      cursor: not-allowed;
-      background-color: $grey-background;
-      &:hover, &:active {
-        opacity: 1;
-      }
-    }
-  }
   .return {
     display: inline-block;
     width: 100%;
@@ -93,10 +74,8 @@
         font-size: .28rem;
       }
     }
-    .button {
+    .common-button {
       margin-top: 1rem;
-      padding: .3rem 0;
-      font-size: .3rem;
     }
     .return {
       margin-top: .6rem;
@@ -140,15 +119,10 @@
     .others {
       margin-top: 40px;
     }
-    .button {
+    .common-button {
       float: right;
       width: 580px;
       margin-top: 40px;
-      padding: 20px 0;
-      font-size: 20px;
-      &:hover {
-        opacity: .9;
-      }
     }
     .return {
       float: right;

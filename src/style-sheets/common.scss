@@ -1,0 +1,37 @@
+@import "./theme";
+@import "./mixin";
+
+.common-button {
+  position: relative;
+  width: 100%;
+  background-color: $theme-color;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  &:hover {
+    opacity: .9;
+  }
+  &:active {
+    opacity: .8;
+  }
+  &[disabled] {
+    background-color: $grey-background;
+    cursor: not-allowed;
+    &:hover, &:active {
+      opacity: 1;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    & {
+      font-size: .3rem;
+      padding: .2rem;
+    }
+  }
+  @media only screen and (min-width: 1025px) {
+    & {
+      font-size: 20px;
+      padding: 10px 0;
+    }
+  }
+}

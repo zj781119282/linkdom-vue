@@ -7,7 +7,9 @@
       <a href="javascript:;">{{defaultCountry.name}}{{defaultCountry.id}}</a>
       <i></i>
     </div>
-    <input type="text" class="fl" v-model="phone" @input="inputPhone" :placeholder="$t('LOGIN.SIGNUP.PHONE')"/>
+    <input type="text" class="fl" v-model="phone"
+           v-validate="'required|numeric'" name="phone"
+           @input="inputPhone" :placeholder="$t('LOGIN.SIGNUP.PHONE')"/>
     <country-code :list="list" @selected="getSelected" v-show="show"></country-code>
   </div>
 </template>

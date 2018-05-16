@@ -29,6 +29,10 @@ input[type="button"], input[type="submit"], input[type="search"], input[type="re
   -webkit-appearance: none;
 }
 
+a, span, i {
+  display: inline-block;
+}
+
 textarea { -webkit-appearance: none;}
 
 img {

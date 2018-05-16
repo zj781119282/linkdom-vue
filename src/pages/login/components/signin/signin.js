@@ -50,10 +50,6 @@ export default {
       this.hideErrorBlock();
     },
     signin() {
-      if (!this.phone || !this.password) {
-        this.error = this.$t('LOGIN.SIGNIN.ERROR');
-        return;
-      }
       if (!this.loaded) return;
       this.loaded = false;
       const params = {

@@ -11,20 +11,6 @@
         border-color: $theme-color;
       }
     }
-    .button {
-      display: inline-block;
-      position: relative;
-      width: 100%;
-      background-color: $theme-color;
-      text-align: center;
-      color: #fff;
-      &:hover {
-        opacity: .9;
-      }
-      &:active {
-        opacity: .8;
-      }
-    }
     .error-block {
       color: red;
     }
@@ -56,11 +42,8 @@
         padding: .1rem .2rem;
         font-size: .24rem;
       }
-      .button {
+      .common-button {
         margin: .5rem 0;
-        padding: .2rem 0;
-        border-radius: .1rem;
-        font-size: .4rem;
       }
       .error-block {
         font-size: .18rem;
@@ -89,11 +72,8 @@
       input[type="text"], input[type="password"] {
         padding: 10px 20px;
       }
-      .button {
+      .common-button {
         margin: 40px 0;
-        padding: 10px 0;
-        border-radius: 8px;
-        font-size: 24px;
       }
       .error-block {
         font-size: 14px;
