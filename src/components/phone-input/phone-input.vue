@@ -9,7 +9,9 @@
     </div>
     <input type="text" class="fl" v-model="phone"
            v-validate="'required|numeric'" name="phone"
-           @input="inputPhone" :placeholder="$t('LOGIN.SIGNUP.PHONE')"/>
+           @input="inputPhone(errors.has('phone'))"
+           @blur="inputPhone(errors.has('phone'))"
+           :placeholder="$t('LOGIN.SIGNUP.PHONE')"/>
     <country-code :list="list" @selected="getSelected" v-show="show"></country-code>
   </div>
 </template>

@@ -26,6 +26,7 @@ export default {
   },
   methods: {
     addAddress() {
+      if (!this.phone || !this.userName || !this.address || !this.street || !this.area || !this.province || !this.country || !this.postal) return;
       this.loaded = false;
       const params = {
         phone: this.phone,
@@ -42,7 +43,7 @@ export default {
         this.userAddress = res.data;
         this.loaded = true;
         this.$emit('added');
-      })
+      });
     },
   },
 }

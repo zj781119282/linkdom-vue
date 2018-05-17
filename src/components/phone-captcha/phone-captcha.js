@@ -40,8 +40,8 @@ export default {
         }
       }, 1000);
     },
-    emitCaptcha() {
-      this.$emit('captcha', this.captcha);
+    emitCaptcha(hasError) {
+      this.$emit('captcha', this.captcha, hasError);
     },
   },
 }

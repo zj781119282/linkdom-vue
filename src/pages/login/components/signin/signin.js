@@ -25,6 +25,7 @@ export default {
       password: '',
       error: '',
       loaded: true,
+      phoneError: false,
     }
   },
   methods: {
@@ -45,12 +46,14 @@ export default {
       this.countryCode = item.id;
       this.hideErrorBlock();
     },
-    getPhone(phone) {
+    getPhone(phone, hasError) {
+      console.log(hasError)
       this.phone = phone;
+      this.phoneError = hasError;
       this.hideErrorBlock();
     },
     signin() {
-      if (!this.loaded) return;
+      if (!this.loaded || this.errors.any() || this.phoneError) return;
       this.loaded = false;
       const params = {
         countryCode: this.countryCode,

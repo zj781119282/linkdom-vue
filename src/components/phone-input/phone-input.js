@@ -46,8 +46,8 @@ export default {
       this.$emit('selected', item);
       this.show = false;
     },
-    inputPhone() {
-      this.$emit('phone', this.phone);
+    inputPhone(hasError) {
+      this.$emit('phone', this.phone, hasError);
     },
   },
   mounted() {

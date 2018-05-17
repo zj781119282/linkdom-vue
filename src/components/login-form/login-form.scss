@@ -43,9 +43,11 @@
         font-size: .24rem;
       }
       .common-button {
-        margin: .5rem 0;
+        margin: .5rem 0 .2rem;
       }
       .error-block {
+        margin-top: .2rem;
+        margin-bottom: -.2rem;
         font-size: .18rem;
       }
     }
@@ -73,9 +75,11 @@
         padding: 10px 20px;
       }
       .common-button {
-        margin: 40px 0;
+        margin: 40px 0 20px;
       }
       .error-block {
+        margin-top: 10px;
+        margin-bottom: -10px;
         font-size: 14px;
       }
     }

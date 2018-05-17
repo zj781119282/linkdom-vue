@@ -3,14 +3,28 @@
     <login-form :title="$t('LOGIN.SIGNUP.TITLE')">
       <form class="signin-form">
         <phone-input @phone="getPhone" @selected="getCountryCode"></phone-input>
+        <p class="error-block" v-show="phoneError">{{$t('LOGIN.SIGNUP.ERROR_ACCOUNT')}}</p>
         <phone-captcha :phone="phone"
                        :country-code="countryCode"
                        @captcha="getCaptcha"
                        @get-captcha-error="getCaptchaError">
         </phone-captcha>
-        <input type="password" id="signup_password" v-model="password" :placeholder="$t('LOGIN.SIGNUP.PWD')" @focus="hideErrorBlock()"/>
-        <input type="password" id="signup_repassword" v-model="re_password" :placeholder="$t('LOGIN.SIGNUP.RE_PWD')"
-               @focus="hideErrorBlock()" @keyup="pressEnter($event)"/>
+        <p class="error-block" v-show="captchaError">{{$t('LOGIN.SIGNUP.ERROR_CAPTCHA')}}</p>
+        <input type="password"
+               name="password"
+               v-validate="'required'"
+               v-model="password"
+               :placeholder="$t('LOGIN.SIGNUP.PWD')"
+               @focus="hideErrorBlock()"/>
+        <p class="error-block" v-show="errors.has('password')">{{$t('LOGIN.SIGNUP.ERROR_PWD')}}</p>
+        <input type="password"
+               name="re_password"
+               v-validate="'required'"
+               v-model="re_password"
+               :placeholder="$t('LOGIN.SIGNUP.RE_PWD')"
+               @focus="hideErrorBlock()"
+               @keyup="pressEnter($event)"/>
+        <p class="error-block" v-show="errors.has('re_password')">{{$t('LOGIN.SIGNUP.ERROR_REPWD')}}</p>
         <a href="javascript:;" class="common-button" @click="signup()">
           {{$t('LOGIN.SIGNUP.TITLE')}}
           <loading :part="true" v-if="!loaded"></loading>

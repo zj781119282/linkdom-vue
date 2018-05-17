@@ -21,6 +21,8 @@ export default {
       re_password: '',
       error: '',
       loaded: true,
+      phoneError: false,
+      captchaError: false,
     }
   },
   methods: {
@@ -37,31 +39,16 @@ export default {
       this.countryCode = item.id;
       this.hideErrorBlock();
     },
-    getPhone(phone) {
+    getPhone(phone, hasError) {
       this.phone = phone;
-      this.hideErrorBlock();
+      this.phoneError = hasError;
     },
-    getCaptcha(captcha) {
+    getCaptcha(captcha, hasError) {
       this.captcha = captcha;
+      this.captchaError = hasError;
     },
     signup() {
-      if (!this.phone) {
-        this.error = this.$t('LOGIN.SIGNUP.ERROR_ACCOUNT');
-        return;
-      }
-      if (!this.captcha) {
-        this.error = this.$t('LOGIN.SIGNUP.ERROR_CAPTCHA');
-        return;
-      }
-      if (!this.password) {
-        this.error = this.$t('LOGIN.SIGNUP.ERROR_PWD');
-        return;
-      }
-      if (!this.re_password || this.re_password !== this.password) {
-        this.error = this.$t('LOGIN.SIGNUP.ERROR_REPWD');
-        return;
-      }
-      if (!this.loaded) return;
+      if (!this.loaded || this.phoneError || this.captchaError || this.errors.any()) return;
       this.loaded = false;
       const params = {
         countryCode: this.countryCode,
