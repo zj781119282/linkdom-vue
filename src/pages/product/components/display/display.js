@@ -1,7 +1,8 @@
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
 
-import slide1 from './assets/prod-test1.jpg'
-import slide2 from './assets/prod-test2.jpg'
+import slide1 from './assets/WechatIMG278.png'
+import slide2 from './assets/WechatIMG283.png'
+import slide3 from './assets/WechatIMG287.png'
 
 export default {
   name: 'display',
@@ -22,25 +23,13 @@ export default {
             id: 1,
         },
         {
-          slide: slide1,
+          slide: slide3,
             id: 2,
-        },
-        {
-          slide: slide2,
-            id: 3,
-        },
-        {
-          slide: slide1,
-            id: 4,
-        },
-        {
-          slide: slide2,
-            id: 5,
         },
       ],
       swiperOption: {
         slidesPerView: 3.5,
-        loop: true,
+        loop: false,
       }
     };
   },
