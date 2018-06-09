@@ -17,7 +17,7 @@
       <!--<section class="index-section cold-hot"></section>-->
 
       <section class="prod">
-        <img src="./assets/prod.png" alt="LinkDam"/>
+        <img src="./assets/prod-1.png" alt="LinkDam"/>
       </section>
 
       <section class="prod">
