@@ -35,7 +35,6 @@ export default {
         count: 1,
       };
       postData().addToCart(params).then(res => {
-        console.log(res)
         this.loaded = true;
         this.$router.push('/purchase/cart');
       });

@@ -16,12 +16,12 @@
             <img src="./assets/prod-test1.jpg" alt=""/>
           </td>
           <td class="tl">
-            <h3>LinkDam Hardware Cold Wallet</h3>
-            <p>Classic</p>
-            <a href="javascript:;">{{$t('PURCHASE.CART.REMOVE')}}</a>
+            <h3>{{product.title}}</h3>
+            <p>黑色</p>
+            <!--<a href="javascript:;">{{$t('PURCHASE.CART.REMOVE')}}</a>-->
           </td>
           <td style="font-weight: bold">
-            {{price}}
+            ￥{{price}}
           </td>
           <td class="tc">
             <a href="javascript:;">{{$t('PURCHASE.CART.REMOVE')}}</a>
@@ -29,7 +29,7 @@
             <a href="javascript:;" @click="update()">{{$t('PURCHASE.CART.UPDATE')}}</a>
           </td>
           <td class="tr" style="font-weight: bold">
-            {{total}}
+            ￥{{total}}
           </td>
         </tr>
       </tbody>
@@ -37,12 +37,15 @@
     <div class="bottom">
       <div class="subtotal">
         <span>{{$t('PURCHASE.CART.SUBTOTAL')}}</span>
-        <span class="sum">{{total}}</span>
+        <span class="sum">￥{{total}}</span>
       </div>
       <div class="checkout">
         <!--<a href="#/product" class="hide-xs">{{$t('PURCHASE.CART.CONTINUE')}}</a>-->
         <a href="javascript:;" class="hide-xs" @click="update()">{{$t('PURCHASE.CART.UPDATE')}}</a>
-        <a href="#/purchase/contact" class="purchase">{{$t('PURCHASE.CART.CHECKOUT')}}</a>
+        <a href="javascript:;" class="purchase" @click="clearing">
+          {{$t('PURCHASE.CART.CHECKOUT')}}
+          <loading :part="true" v-if="addLoading"></loading>
+        </a>
       </div>
     </div>
     <loading v-show="!loaded"></loading>

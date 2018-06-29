@@ -9,15 +9,30 @@ export default {
   data() {
     return {
       showProductList: window.innerWidth > 1024,
-      product: {},
+      count: 0,
+      price: 0,
+      shipping: 12,
       loaded: false,
     }
+  },
+  computed: {
+    subtotal() {
+      return this.count * this.price;
+    },
+    sum() {
+      return this.subtotal + this.shipping;
+    },
   },
   methods: {
     getCart() {
       getData().getCart().then(res => {
-        console.log(res.data)
         this.loaded = true;
+        if (!res.result) {
+          alert(res.message);
+          return;
+        }
+        this.count = res.data.count;
+        this.price = res.data.product.price * res.data.product.discount;
       });
     },
   },

@@ -39,6 +39,7 @@
       a {
         border: 1px solid $light-border;
         &.purchase {
+          position: relative;
           background-color: $theme-color;
           color: #fff;
           &:hover {

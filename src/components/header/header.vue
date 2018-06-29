@@ -1,13 +1,13 @@
 <template>
   <nav class="navbar">
     <div class="nav-container">
-      <a href="index.html" class="nav-logo col-lg-2 col-xs-5">
+      <a href="/" class="nav-logo col-lg-2 col-xs-5">
         <img src="./assets/logo.png" alt="LinkDam" title="LinkDam"/>
       </a>
       <button class="nav-button" :class="{close: showNavList}" @click="showNavList = !showNavList"></button>
       <ul class="nav-list clearfix" :class="{'xs-hide': !showNavList}">
         <li class="index" :class="{active: page === 'index'}">
-          <a href="#/index">{{$t('HEADER.HOME')}}</a>
+          <a href="/">{{$t('HEADER.HOME')}}</a>
         </li>
         <li class="product" :class="{active: page === 'product'}">
           <a href="#/product">{{$t('HEADER.PRODUCT')}}</a>
@@ -15,9 +15,9 @@
         <li class="download" :class="{active: page === 'download'}">
           <a href="#/download">{{$t('HEADER.DOWNLOAD')}}</a>
         </li>
-        <li class="help" :class="{active: page === 'help'}">
-          <a href="#/index">{{$t('HEADER.HELP')}}</a>
-        </li>
+        <!--<li class="help" :class="{active: page === 'help'}">-->
+          <!--<a href="#/index">{{$t('HEADER.HELP')}}</a>-->
+        <!--</li>-->
         <li class="login" :class="{active: page === 'login'}" v-if="!isLogged">
           <a href="#/login">{{$t('HEADER.LOGIN')}}</a>
         </li>

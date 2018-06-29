@@ -70,7 +70,7 @@ export default {
           this[LOGIN_STATUS](true);
           this[USER_ACCOUNT](this.phone);
           this.loaded = true;
-          this.$router.push('/index');
+          this.$router.push('/');
           const loginInfo = {
             timestamp: new Date().valueOf(),
             userId: data.userId,

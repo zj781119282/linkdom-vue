@@ -8,26 +8,30 @@
       <div class="product-list">
         <img src="./../../../cart/assets/prod-test1.jpg" alt=""/>
         <div class="name">
-          <h3>LinkDam Hardware Cold Wallet</h3>
-          <p>Classic</p>
+          <h3>链盾安全硬件钱包</h3>
+          <p>黑色</p>
         </div>
         <div class="sum">
-          $9999.99
+          ￥{{price}}
         </div>
       </div>
       <div class="subtotal">
         <p>
+          <span>{{$t('PURCHASE.CART.QUANTITY')}}</span>
+          <span>{{count}}</span>
+        </p>
+        <p>
           <span>{{$t('PURCHASE.CART.SUBTOTAL')}}</span>
-          <span>$9999.99</span>
+          <span>￥{{subtotal}}</span>
         </p>
         <p>
           <span>{{$t('PURCHASE.CONTACT.SHIPPING')}}</span>
-          <span>$99.99</span>
+          <span>￥{{shipping}}</span>
         </p>
       </div>
       <div class="total">
         <span>{{$t('PURCHASE.CART.TOTAL')}}</span>
-        <h3>$9999.99</h3>
+        <h3>￥{{sum}}</h3>
       </div>
     </div>
     <loading :part="true" v-show="!loaded"></loading>
