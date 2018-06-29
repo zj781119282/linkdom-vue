@@ -24,7 +24,7 @@
         <li class="account" @mouseenter="showUserList = true" @mouseleave="showUserList = false" v-else>
           <a href="javascript:;" class="user-name hide-xs">{{$t('HEADER.WELCOME')}}{{account}}</a>
           <ul v-show="showUserList">
-            <li class="user-center">{{$t('HEADER.USER')}}</li>
+            <!--<li class="user-center">{{$t('HEADER.USER')}}</li>-->
             <li class="logout" @click="logout()">{{$t('HEADER.LOGOUT')}}</li>
           </ul>
         </li>
