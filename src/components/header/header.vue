@@ -12,9 +12,9 @@
         <li class="product" :class="{active: page === 'product'}">
           <a href="#/product">{{$t('HEADER.PRODUCT')}}</a>
         </li>
-        <li class="download" :class="{active: page === 'download'}">
-          <a href="#/download">{{$t('HEADER.DOWNLOAD')}}</a>
-        </li>
+        <!--<li class="download" :class="{active: page === 'download'}">-->
+          <!--<a href="#/download">{{$t('HEADER.DOWNLOAD')}}</a>-->
+        <!--</li>-->
         <!--<li class="help" :class="{active: page === 'help'}">-->
           <!--<a href="#/index">{{$t('HEADER.HELP')}}</a>-->
         <!--</li>-->

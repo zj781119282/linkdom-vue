@@ -7,7 +7,7 @@
       <div class="links">
         <a href="#/index">{{$t('HEADER.HOME')}}</a>
         <a href="#/product">{{$t('HEADER.PRODUCT')}}</a>
-        <a href="#/download">{{$t('HEADER.DOWNLOAD')}}</a>
+        <!--<a href="#/download">{{$t('HEADER.DOWNLOAD')}}</a>-->
         <!--<a href="#/index">{{$t('HEADER.HELP')}}</a>-->
       </div>
       <div class="contact">
