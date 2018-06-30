@@ -16,6 +16,7 @@ const forget = () => import('@/pages/login/components/forget/forget.vue');
 const cart = () => import('@/pages/purchase/components/cart/cart.vue');
 const contact = () => import('@/pages/purchase/components/contact/contact.vue');
 const download = () => import('@/pages/download/download.vue');
+const payment = () => import('@/pages/purchase/components/payment/payment.vue');
 
 const router = new Router({
   routes: [
@@ -73,6 +74,11 @@ const router = new Router({
           path: '/purchase/contact',
           name: 'contact',
           component: contact,
+        },
+        {
+          path: '/purchase/payment/:order',
+          name: 'payment',
+          component: payment,
         },
       ],
     },

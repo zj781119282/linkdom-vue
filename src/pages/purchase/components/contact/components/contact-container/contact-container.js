@@ -66,9 +66,15 @@ export default {
         color: '黑色',
       };
       postData().create(params).then(res => {
-        console.log(res)
+        this.payLoaded = true;
         if (res.result) {
-          this.payLoaded = true;
+          const order = res.data;
+          this.$router.push({
+            name: 'payment',
+            params: {
+              order,
+            },
+          });
         }
       });
     },

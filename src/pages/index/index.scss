@@ -1,80 +1,152 @@
 @import "./../../style-sheets/theme";
 @import "./../../style-sheets/mixin";
 
-.index-section {
-  .block-container {
-    position: relative;
-    article {
-      h2 {
-        font-weight: bold;
+section:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.product-preview {
+  .product-feature {
+    .head {
+      display: flex;
+      justify-content: center;
+      .number {
+
+      }
+      .feature {
+        .en-feature {
+          color: #3a7bd5;
+        }
+      }
+    }
+    .others {
+      .sim-button {
+        margin: 0 auto;;
+        color: #ffffff;
+        @include icon-normal('./assets/bar_bg.png');
+        .inner {
+          text-align: center;
+          color: #ffffff;
+          @include icon-normal('./assets/btn_bg.png');
+        }
+      }
+      p {
+        text-align: center;
+        color: #7c7d7d;
+        span {
+          color: #3a7bd5;
+        }
       }
     }
   }
-}
-
-.cold-hot {
-  background: url("./assets/index-cold.png") no-repeat;
-  background-size: 100% 100%;
-  @include wh(100%, 50vw);
-}
-
-img {
-  width: 100%;
+  .product-img {
+    margin: 0 auto;
+  }
+  img {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-  .index-section {
-    .block-container {
-      padding: .4rem .2rem;
-      article {
-        margin: .4rem 0;
-        h2 {
-          margin-bottom: .4rem;
-          letter-spacing: .04rem;
-          font-size: .48rem;
+  .product-preview {
+    padding: .85rem .35rem .5rem;
+    .product-feature {
+      .head {
+        margin-bottom: .4rem;
+        .number {
+          width: 1rem;
+        }
+        .feature {
+          margin-left: .2rem;
+          .en-feature {
+            font-size: .24rem;
+          }
+          .cn-feature {
+            margin-top: .1rem;
+            font-size: .42rem;
+          }
+        }
+      }
+      .others {
+        .sim-button {
+          line-height: .56rem;
+          padding: .04rem .06rem;
+          font-size: .26rem;
+          @include wh(6.4rem, .64rem);
+          .inner {
+            @include wh(2rem, .56rem);
+          }
         }
         p {
-          margin-top: .2rem;
-          letter-spacing: .02rem;
-          font-size: .32rem;
+          line-height: .4rem;
+          font-size: .24rem;
+          &:not(:first-of-type) {
+            margin-top: .1rem;
+          }
         }
       }
-      .image-container {
-        img {
-          width: 100%;
-        }
-      }
+    }
+    .product-img {
+      margin-top: .5rem;
     }
   }
 }
 
 @media only screen and (min-width: 1025px) {
-  .index-section {
-    .block-container {
-      padding: 5% 10%;
-      article {
-        width: 50%;
-        float: left;
-        margin-top: 5%;
-        padding: 5%;
-        h2 {
-          margin-bottom: 40px;
+  .product-preview {
+    padding: 97px 0 36px;
+    &.horizontal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .product-img {
+        width: 800px;
+        margin: 0;
+      }
+      .others {
+        p {
+          text-align: left;
+        }
+      }
+    }
+    .product-feature {
+      .head {
+        margin-bottom: 34px;
+        .number {
+          width: 140px;
+        }
+        .feature {
+          margin-left: 24px;
+          .en-feature {
+            font-size: 32px;
+          }
+          .cn-feature {
+            font-size: 60px;
+            letter-spacing: 4.6px;
+          }
+        }
+      }
+      .others {
+        .sim-button {
+          line-height: 60px;
+          padding: 6px 8px;
           font-size: 32px;
-          letter-spacing: 4px;
+          @include wh(726px, 76px);
+          .inner {
+            @include wh(228px, 64px);
+          }
         }
         p {
-          margin-top: 20px;
-          font-size: 20px;
-          letter-spacing: 2px;
+          font-size: 30px;
+          &:not(:first-of-type) {
+            margin-top: 10px;
+          }
         }
       }
-      .image-container {
-        width: 50%;
-        float: left;
-        img {
-          width: 100%;
-        }
-      }
+    }
+    .product-img {
+      width: 850px;
+      margin-top: 85px;
     }
   }
 }

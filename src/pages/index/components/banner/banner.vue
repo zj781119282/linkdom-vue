@@ -1,17 +1,18 @@
 <template>
-  <section>
-    <swiper v-if="items.length >= 2" class="clearfix" :options="swiperOption" ref="mySwiper">
-      <swiper-slide v-for="item in items" :key="item.id">
-        <img :src="item.slide" alt=""/>
-      </swiper-slide>
-      <div class="pagination" slot="pagination" v-if="items.length >= 2"></div>
-    </swiper>
-    <div v-else class="no-swiper">
-      <img :src="items[0].slide" alt=""/>
-    </div>
+  <section class="banner">
+    <img src="./../../assets/banner.png" alt="" class="hide-xs"/>
+    <img src="./../../assets/banner-mobile.png" alt="" class="hide-lg"/>
   </section>
 </template>
 
-<script src="./banner.js"></script>
+<script>
+  export default {
+    name: 'banner',
+  }
+</script>
 
-<style lang="scss" src="./banner.scss"></style>
+<style lang="scss" scoped>
+  img {
+    width: 100%;
+  }
+</style>

@@ -32,6 +32,12 @@
       "ADD": "添加地址",
       "CONTINUE": "前往支付",
       "BACK": "< 返回购物车"
+    },
+    "PAYMENT": {
+      "TITLE": "选择支付方式",
+      "WECHAT": "微信支付",
+      "ALIPAY": "支付宝",
+      "SUCCEED": "支付成功"
     }
   }
 }
