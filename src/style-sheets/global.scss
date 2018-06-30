@@ -39,6 +39,10 @@ img {
   vertical-align: top;
 }
 
+.content {
+  -webkit-overflow-scrolling : touch;
+}
+
 /* 全局可用的class类 */
 .clearfix:after {
   content: '';
