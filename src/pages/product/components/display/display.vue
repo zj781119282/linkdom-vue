@@ -5,7 +5,7 @@
     </div>
     <div class="display-list">
       <swiper class="clearfix" :options="swiperOption" ref="displaySwiper">
-        <swiper-slide v-for="item in items" :key="item.id">
+        <swiper-slide v-for="item in items" :key="item.id" v-if="item.color == color">
           <img :src="item.slide" @click="currentItem = item.slide"/>
         </swiper-slide>
       </swiper>

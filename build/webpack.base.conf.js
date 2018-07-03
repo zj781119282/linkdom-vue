@@ -30,6 +30,7 @@ module.exports = {
       '@': resolve('src'),
       'config': path.resolve(__dirname, '../src/config'),
       'service': path.resolve(__dirname, '../src/service'),
+      'assets': path.resolve(__dirname, '../src/assets'),
     }
   },
   module: {

@@ -1,6 +1,7 @@
 import getData from 'service/getData'
 import postData from 'service/postData'
-import loading from '@/components/loading/loading.vue';
+import loading from '@/components/loading/loading.vue'
+import productImg from 'assets/LinkDam-black-01.png'
 
 export default {
   name: 'cart',
@@ -15,6 +16,7 @@ export default {
       product: {},
       loaded: false,
       addLoading: false,
+      productImg,
     }
   },
   computed: {

@@ -13,7 +13,7 @@
       <tbody>
         <tr>
           <td class="tl">
-            <img src="./assets/prod-test1.jpg" alt=""/>
+            <img :src="productImg" alt=""/>
           </td>
           <td class="tl">
             <h3>{{product.title}}</h3>

@@ -39,5 +39,9 @@ export default {
         this.$router.push('/purchase/cart');
       });
     },
+    changeColor(item) {
+      this.color = item;
+      this.$emit('changeColor', item)
+    },
   },
 };

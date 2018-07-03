@@ -13,6 +13,7 @@ import section_8 from './components/section_8.vue';
 import section_9 from './components/section_9.vue';
 import section_10 from './components/section_10.vue';
 import section_11 from './components/section_11.vue';
+import purchase from './components/purchase.vue';
 
 export default {
   name: 'index',
@@ -32,6 +33,7 @@ export default {
     section_9,
     section_10,
     section_11,
+    purchase,
   },
   data() {
     return {

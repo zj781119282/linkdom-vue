@@ -6,7 +6,7 @@
     </div>
     <div class="container" v-show="showProductList">
       <div class="product-list">
-        <img src="./../../../cart/assets/prod-test1.jpg" alt=""/>
+        <img :src="productImg" alt=""/>
         <div class="name">
           <h3>链盾安全硬件钱包</h3>
           <p>黑色</p>

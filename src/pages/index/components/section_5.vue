@@ -39,10 +39,10 @@
   @media only screen and (min-width: 1025px) {
     #section_5 {
       .product-feature {
-        margin-right: 30px;
+        margin-right: 170px;
       }
       .product-img {
-        width: 640px;
+        width: 430px;
       }
       .others {
         width: 410px;

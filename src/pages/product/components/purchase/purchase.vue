@@ -4,7 +4,7 @@
     <p class="desc">{{product.englishTitle}}</p>
     <div class="choose-color clearfix">
       <span :class="{active: color === item}"
-            @click="color = item"
+            @click="changeColor(item)"
             v-for="item in product.color">
         {{item}}
       </span>

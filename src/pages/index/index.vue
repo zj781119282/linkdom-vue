@@ -15,6 +15,7 @@
       <section_9></section_9>
       <section_10></section_10>
       <section_11></section_11>
+      <purchase></purchase>
 
       <foot/>
     </div>

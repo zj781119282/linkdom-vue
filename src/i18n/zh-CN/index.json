@@ -1,6 +1,9 @@
 {
   "INDEX": {
-    "CRYPTION_TITLE1": "全球首款三重加密",
-    "CRYPTION_TITLE2": "全币种硬件钱包"
+    "PURCHASE": {
+      "TITLE": "立即购买链盾？",
+      "BUY": "立即购买",
+      "TOP": "返回顶部"
+    }
   }
 }

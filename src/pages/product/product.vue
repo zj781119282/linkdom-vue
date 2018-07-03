@@ -4,8 +4,8 @@
     <div class="content">
       <section class="preview">
         <div class="preview-container clearfix">
-          <display/>
-          <purchase :product="product"/>
+          <display :color="color"/>
+          <purchase :product="product" @changeColor="changeColor"/>
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 import getData from 'service/getData'
 import loading from '@/components/loading/loading.vue';
+import productImg from 'assets/LinkDam-black-01.png'
 
 export default {
   name: 'order-summary',
@@ -13,6 +14,7 @@ export default {
       price: 0,
       shipping: 12,
       loaded: false,
+      productImg,
     }
   },
   computed: {

@@ -1,0 +1,76 @@
+@import "./../../../style-sheets/theme";
+@import "./../../../style-sheets/mixin";
+
+.purchase-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h4 {
+    color: #fff;
+  }
+  .btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a.common-button {
+      padding: 0;
+      background-color: transparent;
+      &.buy {
+        color: #fff;
+      }
+      &.top {
+        color: #198bd4;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .purchase-section {
+    height: 1rem;
+    padding: 0 1rem;
+    @include icon-normal('./../assets/bg_mobile.png');
+    h4 {
+      font-size: .26rem;
+    }
+    .btn-group {
+      width: 100%;
+      a.common-button {
+        line-height: .64rem;
+        font-size: .24rem;
+        @include wh(2.4rem, .64rem);
+        &.buy {
+          @include icon-normal('./../assets/buy_mobile.png');
+        }
+        &.top {
+          @include icon-normal('./../assets/top_mobile.png');
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .purchase-section {
+    height: 233px;
+    padding: 0 400px;
+    @include icon-normal('./../assets/bg_web.png');
+    h4 {
+      font-size: 26px;
+    }
+    .btn-group {
+      width: 460px;
+      a.common-button {
+        line-height: 54px;
+        font-size: 18px;
+        @include wh(210px, 54px);
+        &.buy {
+          @include icon-normal('./../assets/buy_web.png');
+        }
+        &.top {
+          @include icon-normal('./../assets/top_web.png');
+        }
+      }
+    }
+  }
+}
