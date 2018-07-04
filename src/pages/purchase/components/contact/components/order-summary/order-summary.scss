@@ -39,15 +39,15 @@
 @media only screen and (max-width: 1024px) {
   .order-summary {
     width: 100%;
-    padding: .4rem 0;
+    padding: .2rem 0;
     .show-product {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: .3rem;
-      @include border(1px, solid, $light-border, .05rem);
+      padding: .15rem;
+      @include border(1px, solid, $light-border, 0);
       span {
-        font-size: .2rem;
+        font-size: .12rem;
         &:first-child {
           color: $theme-color;
         }
@@ -57,39 +57,39 @@
       }
     }
     .container {
-      padding: .4rem .2rem;
+      padding: .2rem .2rem;
       .product-list {
         width: 100%;
-        padding: .4rem 0;
+        padding: .2rem 0;
         img {
-          width: 1.6rem;
+          width: 1rem;
         }
         .name {
-          margin-left: .2rem;
+          margin-left: .1rem;
           h3 {
-            font-size: .32rem;
+            font-size: .16rem;
           }
           p {
-            font-size: .2rem;
+            font-size: .12rem;
           }
         }
         .sum {
-          margin-left: .2rem;
-          font-size: .3rem;
+          margin-left: .1rem;
+          font-size: .14rem;
         }
       }
       .subtotal {
-        padding: .2rem 0;
+        padding: .1rem 0;
         p {
-          margin: .2rem 0;
-          font-size: .2rem;
+          margin: .1rem 0;
+          font-size: .12rem;
         }
       }
       .total {
-        padding: .4rem 0;
-        font-size: .24rem;
+        padding: .2rem 0;
+        font-size: .12rem;
         h3 {
-          font-size: .32rem;
+          font-size: .16rem;
         }
       }
     }

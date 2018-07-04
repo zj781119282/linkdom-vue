@@ -38,44 +38,45 @@
 
 @media only screen and (max-width: 1024px) {
   .container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     padding: .4rem 0;
     h2 {
-      margin-bottom: .4rem;
-      font-size: .4rem;
+      margin-bottom: .2rem;
+      font-size: .24rem;
       font-weight: bolder;
       letter-spacing: .02rem;
     }
     .desc {
-      margin-bottom: .2rem;
-      font-size: .2rem;
+      margin-bottom: .4rem;
+      font-size: .16rem;
     }
     .choose-color {
       display: flex;
       justify-content: flex-start;
-      margin-bottom: .2rem;
       span {
         padding: .06rem .2rem;
-        font-size: .16rem;
+        font-size: .12rem;
         &:not(:first-child) {
-          margin-left: .2rem;
+          margin-left: .1rem;
         }
       }
     }
     p {
-      margin-bottom: .32rem;
+      margin-bottom: .3rem;
       .price {
-        font-size: .32rem;
+        font-size: .24rem;
         &.line {
           text-decoration: line-through;
         }
       }
       .discount {
-        font-size: .28rem;
+        font-size: .2rem;
       }
     }
     .purchase-button {
-      padding: .2rem 0;
+      padding: .1rem 0;
       border-radius: .08rem;
       font-size: .32rem;
     }

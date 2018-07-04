@@ -15,7 +15,7 @@
 <style lang="scss" scoped>
   @media only screen and (max-width: 1024px) {
     .login-container {
-      padding: 3.2rem .4rem;
+      padding: 1rem .2rem;
     }
   }
 

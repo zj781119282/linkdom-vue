@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="display-container">
     <div class="hd-image">
       <img :src="currentItem" alt="LinkDam"/>
     </div>
@@ -15,4 +15,4 @@
 
 <script src="./display.js"></script>
 
-<style lang="scss" scoped src="./display.scss"></style>
+<style lang="scss" src="./display.scss"></style>

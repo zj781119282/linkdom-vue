@@ -43,43 +43,45 @@
 
 @media only screen and (max-width: 1024px) {
   .contact-container {
-    padding: .4rem .2rem 1rem;
+    padding: .4rem .2rem .5rem;
 
     .addresses {
       .address {
         &:not(:first-child) {
-          margin-top: .32rem;
+          margin-top: .2rem;
         }
         p {
-          line-height: .3rem;
-          margin: 0 .4rem;
-          padding: .2rem 1rem .2rem 0;
+          line-height: 0;
+          margin: 0 .2rem;
+          padding: .1rem .5rem .1rem 0;
         }
         span {
-          margin-right: .6rem;
-          font-size: .28rem;
+          line-height: 1;
+          margin-right: .3rem;
+          font-size: .14rem;
         }
         em {
-          font-size: .24rem;
+          line-height: 1;
+          font-size: .12rem;
         }
         a {
-          right: .2rem;
-          top: .2rem;
-          font-size: .24rem;
+          right: .1rem;
+          top: .1rem;
+          font-size: .12rem;
         }
       }
     }
     .others {
       .switch {
-        font-size: .28rem;
+        font-size: .14rem;
       }
     }
     .common-button {
       margin-top: 1rem;
     }
     .return {
-      margin-top: .6rem;
-      font-size: .2rem;
+      margin-top: .4rem;
+      font-size: .12rem;
     }
   }
 }

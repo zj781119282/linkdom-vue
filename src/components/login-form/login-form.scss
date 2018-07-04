@@ -29,31 +29,31 @@
   .form {
     width: 100%;
     h1 {
-      font-size: .48rem;
+      font-size: .24rem;
       margin-bottom: .4rem;
     }
     form {
       display: flex;
       flex-direction: column;
       input:not(:first-child) {
-        margin-top: .4rem;
+        margin-top: .2rem;
       }
       input[type="text"], input[type="password"] {
-        padding: .1rem .2rem;
-        font-size: .24rem;
+        padding: .05rem .1rem;
+        font-size: .12rem;
       }
       .common-button {
-        margin: .5rem 0 .2rem;
+        margin: .2rem 0 .1rem;
       }
       .error-block {
-        margin-top: .2rem;
-        margin-bottom: -.2rem;
-        font-size: .18rem;
+        margin-top: .1rem;
+        margin-bottom: -.1rem;
+        font-size: .12rem;
       }
     }
     .login-other {
       span, a {
-        font-size: .2rem;
+        font-size: .12rem;
       }
     }
   }

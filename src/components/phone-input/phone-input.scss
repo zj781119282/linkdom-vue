@@ -15,23 +15,23 @@
     .country-codes {
       display: flex;
       align-items: center;
-      width: 24%;
-      margin-bottom: .2rem;
+      width: 40%;
+      margin-bottom: .1rem;
       a {
-        font-size: .2rem;
+        font-size: .12rem;
         color: $theme-color;
       }
       i {
-        margin-left: .1rem;
-        @include wh(.18rem, .12rem);
+        margin-left: .05rem;
+        @include wh(.1rem, .06rem);
         @include icon-normal('./../../assets/theme-arrow.png');
       }
     }
 
     input {
       width: 100%;
-      padding: .1rem .2rem;
-      font-size: .24rem;
+      padding: .05rem .1rem;
+      font-size: .12rem;
     }
   }
 }

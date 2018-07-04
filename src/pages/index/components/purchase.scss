@@ -27,18 +27,15 @@
 
 @media only screen and (max-width: 1024px) {
   .purchase-section {
-    height: 1rem;
-    padding: 0 1rem;
+    height: .5rem;
+    padding: 0 .5rem;
     @include icon-normal('./../assets/bg_mobile.png');
-    h4 {
-      font-size: .26rem;
-    }
     .btn-group {
       width: 100%;
       a.common-button {
-        line-height: .64rem;
-        font-size: .24rem;
-        @include wh(2.4rem, .64rem);
+        line-height: .32rem;
+        font-size: .14rem;
+        @include wh(1.2rem, .32rem);
         &.buy {
           @include icon-normal('./../assets/buy_mobile.png');
         }

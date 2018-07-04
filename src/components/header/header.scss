@@ -83,8 +83,11 @@ nav {
 
 @media only screen and (max-width: 1024px) {
   nav.navbar {
+    position: fixed;
+    top: 0;
     background-color: $deep-black-background;
-    @include wh(100%, .88rem);
+    z-index: 9999;
+    @include wh(100%, .44rem);
 
     .nav-container {
       display: flex;
@@ -94,9 +97,9 @@ nav {
       @include wh(100%, 100%);
 
       .nav-button {
-        margin-right: .3rem;
+        margin-right: .2rem;
         background-color: $deep-black-background;
-        @include wh(.47rem, .47rem);
+        @include wh(.24rem, .24rem);
         @include icon-normal('./assets/menu.svg');
         &.close {
           @include icon-normal('./assets/close.svg');
@@ -108,7 +111,7 @@ nav {
         height: 100%;
         align-items: center;
         justify-content: flex-start;
-        margin-left: .3rem;
+        margin-left: .2rem;
         img {
           max-height: 80%;
           min-height: 60%;
@@ -118,7 +121,7 @@ nav {
       ul.nav-list {
         display: block;
         position: absolute;
-        top: .88rem;
+        top: .44rem;
         background: $deep-black-background;
         overflow: hidden;
         transition: all .2s ease;
@@ -131,9 +134,9 @@ nav {
           margin: .3rem 0;
           a {
             width: 80%;
-            padding: .16rem 0;
+            padding: .08rem 0;
             text-align: center;
-            font-size: .3rem;
+            font-size: .16rem;
           }
           &:active {
             background-color: rgba(51, 51, 51, .8);
@@ -144,11 +147,11 @@ nav {
 
             li {
               width: 50%;
-              padding: .3rem;
+              padding: .16rem;
               white-space: nowrap;
-              font-size: .24rem;
+              font-size: .16rem;
               &:not(:last-child) {
-                border-right: 1px solid #fff;
+                border-right: .01rem solid #fff;
               }
               &:first-child {
                 text-align: right;

@@ -9,13 +9,16 @@ img {
 }
 
 @media only screen and (max-width: 1024px) {
-  .container {
+  .display-container {
     width: 100%;
+    .display-list {
+      line-height: 0;
+    }
   }
 }
 
 @media only screen and (min-width: 1025px) {
-  .container {
+  .display-container {
     float: left;
     width: 50%;
   }

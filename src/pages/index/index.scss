@@ -53,45 +53,47 @@ section:nth-child(2n) {
 
 @media only screen and (max-width: 1024px) {
   .product-preview {
-    padding: .85rem .35rem .5rem;
+    padding: .42rem .16rem .5rem;
     .product-feature {
       .head {
-        margin-bottom: .4rem;
+        height: .5rem;
+        margin-bottom: .2rem;
         .number {
-          width: 1rem;
+          width: .6rem;
         }
         .feature {
-          margin-left: .2rem;
+          margin-left: .1rem;
           .en-feature {
-            font-size: .24rem;
+            font-size: .14rem;
           }
           .cn-feature {
-            margin-top: .1rem;
-            font-size: .42rem;
+            line-height: .3rem;
+            margin-top: .05rem;
+            font-size: .2rem;
           }
         }
       }
       .others {
         .sim-button {
-          line-height: .56rem;
-          padding: .04rem .06rem;
-          font-size: .26rem;
-          @include wh(6.4rem, .64rem);
+          line-height: .3rem;
+          padding: .02rem .03rem;
+          font-size: .14rem;
+          @include wh(3.2rem, .32rem);
           .inner {
-            @include wh(2rem, .56rem);
+            @include wh(1rem, .28rem);
           }
         }
         p {
-          line-height: .4rem;
-          font-size: .24rem;
+          line-height: .2rem;
+          font-size: .14rem;
           &:not(:first-of-type) {
-            margin-top: .1rem;
+            margin-top: .05rem;
           }
         }
       }
     }
     .product-img {
-      margin-top: .5rem;
+      margin-top: .24rem;
     }
   }
 }

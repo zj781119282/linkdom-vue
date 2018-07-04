@@ -2,7 +2,7 @@
   <div class="order-summary">
     <div class="show-product hide-lg" @click="showProductList = !showProductList">
       <span>{{$t('PURCHASE.CONTACT.SHOW')}}</span>
-      <span>$9999.99</span>
+      <span>￥{{sum}}</span>
     </div>
     <div class="container" v-show="showProductList">
       <div class="product-list">

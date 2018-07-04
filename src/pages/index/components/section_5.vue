@@ -50,4 +50,11 @@
       }
     }
   }
+  @media only screen and (max-width: 1024px) {
+    #section_5 {
+      .product-img {
+        padding: 0 .4rem;
+      }
+    }
+  }
 </style>

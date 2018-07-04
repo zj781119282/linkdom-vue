@@ -15,7 +15,6 @@ const signup = () => import('@/pages/login/components/signup/signup.vue');
 const forget = () => import('@/pages/login/components/forget/forget.vue');
 const cart = () => import('@/pages/purchase/components/cart/cart.vue');
 const contact = () => import('@/pages/purchase/components/contact/contact.vue');
-const download = () => import('@/pages/download/download.vue');
 const payment = () => import('@/pages/purchase/components/payment/payment.vue');
 
 const router = new Router({
@@ -81,11 +80,6 @@ const router = new Router({
           component: payment,
         },
       ],
-    },
-    {
-      path: '/download',
-      name: 'download',
-      component: download,
     },
   ],
 });
