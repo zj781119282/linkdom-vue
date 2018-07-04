@@ -24,12 +24,12 @@ nav {
       }
 
       .nav-logo {
-        width: auto;
         height: 100%;
         img {
+          width: auto;
+          height: 75%;
           margin-left: 15px;
           margin-top: 6px;
-          height: 75%;
         }
       }
 
@@ -109,12 +109,12 @@ nav {
 
       .nav-logo {
         display: flex;
-        width: auto;
         height: 100%;
         align-items: center;
         justify-content: flex-start;
         margin-left: .2rem;
         img {
+          width: auto;
           max-height: 80%;
           min-height: 60%;
         }
